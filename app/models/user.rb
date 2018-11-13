@@ -37,5 +37,4 @@ class User < ApplicationRecord
     SecureRandom.urlsafe_base64
   end
 
-
 end
