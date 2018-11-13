@@ -20,6 +20,4 @@ class Api::SessionsController < ApplicationController
       render json: ['No User Logged In'], status: 404
     end
   end
-
-  def
 end
