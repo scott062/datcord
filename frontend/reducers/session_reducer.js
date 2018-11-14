@@ -14,7 +14,7 @@ const sessionReducer = (currentState = {}, action) => {
       return newState
 
     default:
-      return defaultState;
+      return currentState;
   };
 };
 
