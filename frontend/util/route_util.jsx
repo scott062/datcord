@@ -10,7 +10,7 @@ const Auth = ({ component: Component, path, loggedIn, exact}) => {
         ) : (
           <Redirect to='/login' />
         )
-      )};/>
+      )}/>
   );
 };
 
@@ -22,7 +22,7 @@ const Protected = ({ component: Component, path, loggedIn, exact}) => {
         ) : (
           <Redirect to='/' />
         )
-      )};/>
+      )}/>
   );
 };
 

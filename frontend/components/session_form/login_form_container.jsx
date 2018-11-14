@@ -5,10 +5,10 @@ import sessionForm from './session_form';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 
-const msp = (state) => {
+const msp = ({ errors }) => {
   return {
     formType: 'login',
-    errors: state.errors,
+    errors: errors.login
   }
 };
 
