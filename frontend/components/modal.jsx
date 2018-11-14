@@ -8,21 +8,21 @@ function Modal({ modal, closeModal }) {
   if (!modal) {
     return null;
   }
-  let component; //this will be changed based on the case statement
+  let component;
   switch (modal) {
     case 'login':
       component = <LoginFormContainer />
-      break; //what is this doing?
+      break;
     case 'signup':
       component = <SignupFormContainer />
       break;
 
     default:
       return null;
-  } //if you make it to the next return then you got a modal and a comp
+  }
   return (
     <div class="modal-background" onClick={closeModal}>
-      <div class="modal-child" onClick={e => e.stopPropagation()}> //wtf is this?
+      <div class="modal-child" onClick={e => e.stopPropagation()}>
         { component }
       </div>
     </div>
