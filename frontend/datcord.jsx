@@ -8,13 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //testing begins here
-import * as SessionApiUtil from './util/session_api_util';
+import { login } from './actions/session_actions';
 
 const store = configureStore();
 
 window.getState = store.getState;
 window.dispatch = store.dispatch;
-window.login = SessionApiUtil.login;
-window.signup = SessionApiUtil.signup;
-window.logout = SessionApiUtil.logout;
+window.login = login;
 //testing ends here
