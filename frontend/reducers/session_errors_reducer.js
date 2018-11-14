@@ -10,7 +10,6 @@ const sessionErrorsReducer = (currentState = {}, action) => {
 
     default:
       return currentState;
-
   };
 };
 
