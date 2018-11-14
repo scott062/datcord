@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //testing begins here
 import * as SessionApiUtil from './util/session_api_util';
+
 const store = configureStore();
+
 window.getState = store.getState;
 window.dispatch = store.dispatch;
 window.login = SessionApiUtil.login;
