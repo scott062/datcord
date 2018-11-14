@@ -2,10 +2,12 @@ import React from 'react';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { Route } from 'react-router-dom';
+import Modal from './modal';
 
 const App = () => {
   return (
     <div>
+      <Modal />
       <header>DATCORD</header>
       <Route path='/login' component={LoginFormContainer} />
       <Route path='/signup' component={SignupFormContainer} />

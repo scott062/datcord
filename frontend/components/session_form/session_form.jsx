@@ -25,16 +25,25 @@ class SessionForm extends React.Component {
     if (this.state.formType === 'signup') {
       return (
         <div>
-          <input
-            type='text'
-            value={this.state.email}
-            onChange={this.update('email')}
-          />
-          <input
-            type='text'
-            value={this.state.avatar_url}
-            onChange={this.update('avatar_url')}
-          />
+
+          <label>
+            EMAIL
+            <input
+              type='text'
+              value={this.state.email}
+              onChange={this.update('email')}
+            />
+          </label>
+
+          <label>
+            PROFILE IMAGE URL
+            <input
+              type='text'
+              value={this.state.avatar_url}
+              onChange={this.update('avatar_url')}
+            />
+          </label>
+
         </div>
       )
     }
@@ -55,17 +64,27 @@ class SessionForm extends React.Component {
       <div>
         {this.renderErrors()}
         <form onSubmit={this.handleSubmit}>
-          <input
-            type='text'
-            value={this.state.username}
-            onChange={this.update('username')}
-          />
-          <input
-            type='password'
-            value={this.state.password}
-            onChange={this.update('password')}
-          />
+
+          <label>
+            USERNAME
+            <input
+              type='text'
+              value={this.state.username}
+              onChange={this.update('username')}
+            />
+          </label>
+
+          <label>
+            PASSWORD
+            <input
+              type='password'
+              value={this.state.password}
+              onChange={this.update('password')}
+            />
+          </label>
+
           {this.isSignup}
+
         </form>
       </div>
     )
