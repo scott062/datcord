@@ -3,5 +3,5 @@ import ReactDOM from 'react-dom';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
-  ReactDOM.render(<h1>DatCord</h1>, root)
-})
+  ReactDOM.render(<div><h1>Welcome to DatCord</h1></div>, root);
+});
