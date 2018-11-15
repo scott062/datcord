@@ -8,7 +8,7 @@ const msp = ({ errors }) => {
   return {
     formType: 'login',
     errors: errors.login,
-    navLink: <div><p>Need an account?</p><Link to='/signup'>Register</Link></div>,
+    navLink: <div className="navLink"><p>Need an account?</p><Link to='/signup'>Register</Link></div>,
   }
 };
 
