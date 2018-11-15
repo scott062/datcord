@@ -15,6 +15,7 @@ textarea, select, input, button { outline: none; }
   text-align: center;
   justify-content: center;
   position: relative;
+  margin-top: 15px;
 }
 
 .session-header h2 {
@@ -29,7 +30,7 @@ textarea, select, input, button { outline: none; }
   font-size: 18px;
   font-weight: 200;
   color: #72767d;
-  margin: 20px 50px 20px 50px;
+  margin: 20px 40px 20px 40px;
 }
 
 .session-form-container {
@@ -44,19 +45,14 @@ textarea, select, input, button { outline: none; }
   box-sizing: border-box;
   padding: 20px;
   position: fixed;
-  top: 29%;
-  right: 51%;
-
-
-
-  // font-weight: lighter;
-  // font-size: 12px;
-  // color: #f6f6f1;
-
+  top: 25%;
+  right: 52%;
+  border-radius: 5px;
+  box-shadow: -1px 2px 30px #181b1d;
 }
 
 .session-form-container form {
-  margin: 25px 0;
+  margin: 0 20px 0 20px;
 }
 
 .session-form-container label {
@@ -86,11 +82,12 @@ textarea, select, input, button { outline: none; }
 }
 
 .session-input:hover {
-  border: solid black .5px;
+  border: solid black 1.25px;
 }
 
 .session-input:focus {
   border: solid #7289DA .5px;
+
 }
 
 input[type=submit] {
@@ -106,6 +103,7 @@ input[type=submit] {
   margin: 8px 0 ;
   text-transform: capitalize;
   box-sizing: border-box;
+  padding: 10px 10px;
 }
 
 input[type=submit]:hover {
