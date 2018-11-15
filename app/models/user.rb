@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :avatar_url, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :ensure_avatar_url
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
@@ -25,6 +25,10 @@ class User < ApplicationRecord
     self.session_token = User.generate_session_token
     self.save!
     self.session_token
+  end
+
+  def ensure_avatar_url
+    self.avatar_url ||= 
   end
 
   private
