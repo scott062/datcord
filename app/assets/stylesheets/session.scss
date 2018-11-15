@@ -124,3 +124,20 @@ input[type=submit]:hover {
   color: #7289DA;
   font-weight: 600;
 }
+
+.errors li {
+  max-height: 40px;
+
+  background-color: #36393f;
+  border: solid red .5px;
+  border-radius: 4px;
+  padding: 8px;
+  color: red;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  font-style: italic;
+  box-sizing: border-box;
+  margin: 12px 0;
+  text-align: left;
+}
