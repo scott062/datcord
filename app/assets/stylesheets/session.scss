@@ -1,0 +1,66 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background-image: url('session_background_scene.jpg');
+}
+
+textarea, select, input, button { outline: none; }
+
+.session-form-container {
+  margin: 0 auto;
+  min-height: 440px;
+  max-width: 410px;
+  background-color: #2C2F33;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+
+  font-weight: lighter;
+  font-size: 12px;
+  color: #f6f6f1;
+
+}
+
+.session-form-container, label {
+  font-size: 12px;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: bold;
+  color: #99AAB5;
+}
+
+.session-input {
+  width: 100%;
+  background-color: #23272A;
+  border: solid #181b1d .5px;
+  border-radius: 4px;
+  padding: 10px;
+  color: #ffffff;
+  font-family: 'Catamaran', sans-serif;
+
+  font-size: 15px;
+}
+
+.session-input:hover {
+  border: solid black .5px;
+}
+
+.session-input:focus {
+  border: solid #7289DA .5px;
+}
+
+input[type=submit] {
+  background-color: #7289DA;
+  font-size: 15px;
+  font-family: 'Catamaran', sans-serif;
+  width: 100%;
+  color: #ffffff;
+  border: none;
+}
+input[type=submit]:hover {
+  background-color: #6778b5;
+}

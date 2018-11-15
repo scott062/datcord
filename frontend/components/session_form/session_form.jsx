@@ -32,6 +32,7 @@ class SessionForm extends React.Component {
           <label>
             USERNAME
             <input
+              class="session-input"
               type='text'
               value={this.props.username}
               onChange={this.update('username')}
@@ -53,38 +54,35 @@ class SessionForm extends React.Component {
 
   render () {
     return (
-      <div>
+      <div class="session-form-container">
 
         {this.renderErrors()}
 
         <form onSubmit={this.handleSubmit}>
-
           <label>
             EMAIL
             <input
+              class="session-input"
               type='text'
               value={this.props.email}
               onChange={this.update('email')}
             />
           </label>
-
           {this.isSignup()}
-
           <label>
             PASSWORD
             <input
+              class="session-input"
               type='password'
               value={this.props.password}
               onChange={this.update('password')}
             />
           </label>
-
-
           <input
             type="submit"
             value={this.props.formType}
           />
-        {this.props.navLink}
+          {this.props.navLink}
         </form>
       </div>
     )
