@@ -2,7 +2,9 @@ html, body {
   margin: 0;
   height: 100%;
   overflow: hidden;
+  background-size: cover;
   background-image: url('session_background_scene.jpg');
+  background-position: bottom;
 }
 
 textarea, select, input, button { outline: none; }
