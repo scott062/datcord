@@ -28,7 +28,7 @@ class User < ApplicationRecord
   end
 
   def ensure_avatar_url
-    self.avatar_url ||= 
+    self.avatar_url ||= "please find a url for this image"
   end
 
   private
