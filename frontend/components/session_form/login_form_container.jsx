@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { login } from '../../actions/session_actions';
+import { login, signup } from '../../actions/session_actions';
 import { Link } from 'react-router-dom';
 import sessionForm from './session_form';
 
