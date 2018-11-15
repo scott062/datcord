@@ -5,6 +5,7 @@ html, body {
   background-size: cover;
   background-image: image-url('session_background_scene.jpg');
   background-position: bottom;
+  z-index: -1;
 }
 
 textarea, select, input, button { outline: none; }
@@ -140,4 +141,21 @@ input[type=submit]:hover {
   box-sizing: border-box;
   margin: 12px 0;
   text-align: left;
+}
+
+.cloud {
+  background-image: image-url('abstract_dropback_image.png');
+  height: 1800px;
+  width: 1900px;
+  background-color: #36393f;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.parentCloud {
+  position: relative;
+  height: 2000px;
+  left: -1000px;
+  top: -1000px;
+  overflow: hidden;
 }

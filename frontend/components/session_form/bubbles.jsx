@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default bubbleComponent = () => {
+export default () => {
   return (
-    <div className=bubblesBox>
+    <div className="bubblesBox">
       <ul className="bubbles">
         <li></li>
         <li></li>

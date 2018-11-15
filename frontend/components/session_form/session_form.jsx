@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-
+import BubbleComponent from './bubbles.jsx';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -71,6 +71,9 @@ class SessionForm extends React.Component {
 
   render () {
     return (
+      <>
+      <div className="parentCloud"><div className="cloud"></div></div>
+      <BubbleComponent />
       <div className="session-form-container">
         {this.renderHeader()}
         {this.renderErrors()}
@@ -102,6 +105,7 @@ class SessionForm extends React.Component {
           {this.props.navLink}
         </form>
       </div>
+      </>
     )
   }
 }
