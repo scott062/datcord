@@ -8,7 +8,7 @@ const Auth = ({ component: Component, path, loggedIn, exact}) => {
         !loggedIn ? (
           <Component {...props} />
         ) : (
-          <Redirect to='/login' />
+          <Redirect to='/' />
         )
       )}/>
   );
@@ -17,10 +17,10 @@ const Auth = ({ component: Component, path, loggedIn, exact}) => {
 const Protected = ({ component: Component, path, loggedIn, exact}) => {
   return (
     <Route path={path} exact={exact} render={(props) => (
-        !loggedIn ? (
+        loggedIn ? (
           <Component {...props} />
         ) : (
-          <Redirect to='/' />
+          <Redirect to='/login' />
         )
       )}/>
   );
@@ -28,8 +28,9 @@ const Protected = ({ component: Component, path, loggedIn, exact}) => {
 
 
 const msp = (state) => {
+  debugger
   return {
-    loggedIn: Boolean(state.session.id)
+    loggedIn: Boolean(state.session.currentUserId)
   };
 };
 

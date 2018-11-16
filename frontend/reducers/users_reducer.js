@@ -5,6 +5,7 @@ const usersReducer = (currentState = {}, action) => {
   Object.freeze(currentState);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
+    debugger
       return merge({}, currentState, { [action.user.id]: action.user } )
 
     default:

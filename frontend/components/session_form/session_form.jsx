@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import BubbleComponent from './bubbles.jsx';
 
@@ -12,6 +13,24 @@ class SessionForm extends React.Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  renderNavLink() {
+    if (this.props.formType === 'signup') {
+      return (
+        <div className="navLink">
+          <Link to='/login'>Already have an account?</Link>
+        </div>
+      )
+    } else {
+      return (
+        <div className="navLink">
+          <p>Need an account?</p><Link to='/signup'>Register</Link>
+          <p>Or want to test it first?</p>
+          <button onClick={this.props.demoLogin}>Try it now!</button>
+        </div>
+      )
+    }
   }
 
   renderHeader() {
@@ -43,7 +62,7 @@ class SessionForm extends React.Component {
     });
   }
 
-  isSignup() {
+  renderUsernameField() {
     if (this.props.formType === 'signup') {
       return (
           <label>
@@ -86,9 +105,10 @@ class SessionForm extends React.Component {
               type='text'
               value={this.props.email}
               onChange={this.update('email')}
+
             />
           </label>
-          {this.isSignup()}
+          {this.renderUsernameField()}
           <label>
             PASSWORD
             <input
@@ -102,8 +122,8 @@ class SessionForm extends React.Component {
             type="submit"
             value={this.props.formType}
           />
-          {this.props.navLink}
         </form>
+        {this.renderNavLink()}
       </div>
       </>
     )

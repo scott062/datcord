@@ -8,13 +8,13 @@ const msp = ({ errors }) => {
   return {
     formType: 'login',
     errors: errors.login,
-    navLink: <div className="navLink"><p>Need an account?</p><Link to='/signup'>Register</Link></div>,
   }
 };
 
 const mdp = (dispatch) => {
   return {
     formAction: (user) => dispatch(login(user)),
+    demoLogin: () => dispatch(login({ email: "demo@email.com", password: "password"}))
   };
 };
 
