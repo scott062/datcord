@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let store;
   if (window.currentUser) {
-    debugger
     const preloadedState = {
       entities: {
         users: { [window.currentUser.id]: window.currentUser }
@@ -17,20 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore(preloadedState);
     delete window.currentUser;
   } else {
-    debugger
     store = configureStore();
   }
+  // testing here
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  // testing end here
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
 });
 
-//testing begins here
+//testing begins here #NOTE
 import { login } from './actions/session_actions';
-
-const store = configureStore();
-
-window.getState = store.getState;
-window.dispatch = store.dispatch;
 window.login = login;
 //testing ends here
