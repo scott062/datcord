@@ -145,8 +145,9 @@ input[type=submit]:hover {
 
 .cloud {
   background-image: image-url('abstract_dropback_image.png');
-  height: 1800px;
-  width: 1900px;
+  background-repeat: round;
+  height: 1500px;
+  width: 1400px;
   background-color: #36393f;
   border-radius: 50%;
   position: absolute;
@@ -155,7 +156,7 @@ input[type=submit]:hover {
 .parentCloud {
   position: relative;
   height: 2000px;
-  left: -1000px;
-  top: -1000px;
+  left: -770px;
+  top: -800px;
   overflow: hidden;
 }
