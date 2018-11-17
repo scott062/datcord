@@ -1,12 +1,41 @@
+html, body, .main {
+  height: 100%;
+}
 .main {
   background-color: #36393f;
   display: flex;
-  flex-flow: column;
+  flex-flow: row nowrap;
   border-color: red;
+  min-height: 100vh;
+  // align-items: stretch;
 }
 
-
-
 .servers_container {
-  flex: 1 100%;
+  background-color: #202225;
+  flex: 0 0 70px;
+  order: 1;
+  overflow-y: scroll;
+}
+
+.channels_container {
+  background-color: rgba(32,34,37,.6);
+  flex: 0 0 240px;
+  order: 2;
+  overflow-y: scroll;
+
+}
+
+.messages_container {
+  flex: 4, 4, 200px;
+  order: 3;
+  align-self: stretch;
+  overflow-y: scroll;
+
+}
+
+.members_container {
+  background-color: rgba(32,34,37,.6);
+  flex: 0 0 240px;
+  order: 4;
+  overflow-y: scroll;
 }
