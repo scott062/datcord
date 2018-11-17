@@ -8,26 +8,24 @@
 User.destroy_all
 Server.destroy_all
 
-User.create({email: "demo@email.com", password: "password", username: "demoUser"})
+demo = User.create({email: "demo@email.com", password: "password", username: "demoUser"})
 
-User.create({email: "test@email.com", password: "password", username: "test"})
+test = User.create({email: "test@email.com", password: "password", username: "test"})
 
-User.create({email: "scott@email.com", password: "password", username: "scott"})
+scott = User.create({email: "scott@email.com", password: "password", username: "scott"})
 
-User.create({email: "keith@email.com", password: "password", username: "keith"})
+keith = User.create({email: "keith@email.com", password: "password", username: "keith"})
 
-User.create({email: "dustin@email.com", password: "password", username: "dustin"})
+dustin = User.create({email: "dustin@email.com", password: "password", username: "dustin"})
 
-User.create({email: "brittany@email.com", password: "password", username: "brittany"})
+brittany = User.create({email: "brittany@email.com", password: "password", username: "brittany"})
 
-User.create({email: "regan@email.com", password: "password", username: "regan"})
+regan = User.create({email: "regan@email.com", password: "password", username: "regan"})
 
-User.create({email: "david@email.com", password: "password", username: "david"})
+david = User.create({email: "david@email.com", password: "password", username: "david"})
 
-########################################################################
+Server.create({admin_id: demo.id, server_name: "JavascriptClub"})
 
-Server.create({admin_id: 1, server_name: "JavascriptClub"})
+Server.create({admin_id: test.id, server_name: "CSSHaters"})
 
-Server.create({admin_id: 2, server_name: "CSSHaters"})
-
-Server.create({admin_id: 3, server_name: "BinaryOrNothing"})
+Server.create({admin_id: scott.id, server_name: "BinaryOrNothing"})
