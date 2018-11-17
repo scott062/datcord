@@ -94,7 +94,7 @@ class SessionForm extends React.Component {
 
   render () {
     return (
-      <>
+      <div className="background">
       <div className="parentCloud"><div className="cloud"></div></div>
       <BubbleComponent />
       <div className="session-form-container">
@@ -129,7 +129,7 @@ class SessionForm extends React.Component {
         </form>
         {this.renderNavLink()}
       </div>
-      </>
+    </div>
     )
   }
 }

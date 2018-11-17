@@ -1,11 +1,13 @@
 html, body {
+
+}
+
+.background {
   margin: 0;
   height: 100%;
   overflow: hidden;
-  background-size: cover;
+  background-size: auto;
   background-image: image-url('session_background_scene.jpg');
-  background-position: bottom;
-  z-index: -1;
 }
 
 textarea, select, input, button { outline: none; }
