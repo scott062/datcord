@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
+Server.destroy_all
 
 User.create({email: "demo@email.com", password: "password", username: "demoUser"})
 
@@ -22,3 +23,11 @@ User.create({email: "brittany@email.com", password: "password", username: "britt
 User.create({email: "regan@email.com", password: "password", username: "regan"})
 
 User.create({email: "david@email.com", password: "password", username: "david"})
+
+########################################################################
+
+Server.create({admin_id: 1, server_name: "JavascriptClub"})
+
+Server.create({admin_id: 2, server_name: "CSSHaters"})
+
+Server.create({admin_id: 3, server_name: "BinaryOrNothing"})

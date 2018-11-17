@@ -1,37 +1,44 @@
 class Api::ServersController < ApplicationController
 
+  before_action :require_login
+
   def create
     @server = Server.new(server_params)
     if @server.save
       render 'api/servers/show'
     else
-      render json: @server.errors.full_messages, status: 422
+      render json: @server.errors.full_messages
     end
   end
 
-  def show
-  end
-
   def destroy
-    @server = Server.find_by(server_params)
+    @server = Server.find(params[:id])
+    if @server
+      @server.destroy
+      render 'api/servers/index'
+    else
+      render json: @server.errors.full_messages, status: 404
+    end
   end
 
   def index
-    @servers
+    @servers = current_user.server_memberships
+    if @servers
+      render 'api/servers/index'
+    else
+      render json: @servers.errors.full_messages
+    end
   end
 
-  def edit
-  end
 
-  def update
-  end
-
-  def new
-  end
 
   private
 
   def server_params
-    params.require(:server).permit(:server_name, :server_id, :avatar_url)
+    params.require(:server).permit(
+      :server_name,
+      :server_id,
+      :avatar_url
+    )
   end
 end
