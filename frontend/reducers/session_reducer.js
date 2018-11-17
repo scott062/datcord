@@ -2,6 +2,7 @@ import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_ac
 
 const sessionReducer = (currentState = {}, action) => {
   Object.freeze(currentState);
+
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       return { currentUserId: action.user.id }

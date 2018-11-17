@@ -26,11 +26,9 @@ class Api::ServersController < ApplicationController
     if @servers
       render 'api/servers/index'
     else
-      render json: @servers.errors.full_messages
+      render json: ['You do not belong to any servers.']
     end
   end
-
-
 
   private
 
