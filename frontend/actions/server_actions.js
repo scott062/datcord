@@ -5,13 +5,13 @@ export const RECEIVE_SERVERS = 'RECEIVE_SERVERS';
 export const REMOVE_SERVER = 'REMOVE_SERVER';
 
 
-export fetchServer = (id) => (dispatch) => {
+export const fetchServer = (id) => (dispatch) => {
   return (ServerApiUtil.fetchServer(id).then( (res) => {
        return (dispatch(receiveServer(res)))
      }))
 };
 
-export fetchServers = (current_user) => (dispatch) => {
+export const fetchServers = (current_user) => (dispatch) => {
   return
   (ServerApiUtil.fetchServers(currentUser).then( (res) => {
     return (dispatch(receiveServers(res)))
@@ -32,13 +32,13 @@ export const receiveServer = (server) => {
   }
 };
 
-export createServer = (serverDetails) => (dispatch) => {
+export const createServer = (serverDetails) => (dispatch) => {
   (ServerApiUtil.createServer(serverDetails).then((res) => {
        return (dispatch(receiveServer(res)))
      }))
 };
 
-export const fetchServer = (id) => (dispatch) => {
+export const deleteServer = (id) => (dispatch) => {
   return (ServerApiUtil.deleteServer(id).then( (res) => {
        return (dispatch(removeServer(res)))
      }))
