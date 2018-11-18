@@ -11,9 +11,9 @@ export const fetchServer = (id) => (dispatch) => {
      }))
 };
 
-export const fetchServers = (current_user) => (dispatch) => {
+export const fetchServers = () => (dispatch) => {
   return
-  (ServerApiUtil.fetchServers(currentUser).then( (res) => {
+  (ServerApiUtil.fetchServers().then( (res) => {
     return (dispatch(receiveServers(res)))
   }))
 };

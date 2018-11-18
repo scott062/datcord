@@ -26,8 +26,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
 });
-
-//testing begins here #NOTE
-import { login } from './actions/session_actions';
-window.login = login;
-//testing ends here

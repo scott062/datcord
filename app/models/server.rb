@@ -13,6 +13,10 @@ class Server < ApplicationRecord
     foreign_key: :server_id,
     class_name: :Member
 
+  has_many :users,
+    through: :members,
+    source: :user
+
   has_many :channels,
     primary_key: :id,
     foreign_key: :server_id,

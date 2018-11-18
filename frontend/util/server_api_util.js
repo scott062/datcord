@@ -1,7 +1,7 @@
 export const fetchServers = (current_user) => {
   return $.ajax({
     method: 'GET',
-    url: `api/users/${current_user.id}/servers`,
+    url: 'api/servers',
   });
 };
 
@@ -15,7 +15,7 @@ export const fetchServer = (id) => {
 export const createServer = (serverDetails) => {
   return $.ajax({
     method: 'POST',
-    url: `api/servers`,
+    url: 'api/servers',
     serverDetails
   });
 };
