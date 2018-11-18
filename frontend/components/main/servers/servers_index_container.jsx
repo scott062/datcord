@@ -1,10 +1,3 @@
-// export default () => {
-//   return (
-//     <div className="servers_container">
-//     </div>
-//   )
-// }
-//
 import React from 'react';
 import { connect } from 'react-redux';
 import ServersIndex from './servers_index';

@@ -7,13 +7,13 @@ class ServerIndex extends React.Component {
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchServers();
   }
 
   render() {
     const { servers } = this.props;
     let renderServerIndex;
-
     if (servers) {
       renderServerIndex = (Object.values(servers).map(server => (
         <ServerItem
