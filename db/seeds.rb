@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Server.destroy_all
+Member.destory_all
 
 demo = User.create({email: "demo@email.com", password: "password", username: "demoUser"})
 
@@ -24,8 +25,12 @@ regan = User.create({email: "regan@email.com", password: "password", username: "
 
 david = User.create({email: "david@email.com", password: "password", username: "david"})
 
-Server.create({admin_id: demo.id, server_name: "JavascriptClub"})
+js = Server.create({admin_id: demo.id, server_name: "JavascriptClub"})
 
-Server.create({admin_id: test.id, server_name: "CSSHaters"})
+css = Server.create({admin_id: test.id, server_name: "CSSHaters"})
 
-Server.create({admin_id: scott.id, server_name: "BinaryOrNothing"})
+binary = Server.create({admin_id: scott.id, server_name: "BinaryOrNothing"})
+
+Member.create({user_id: demo.id, server_id: js.id})
+Member.create({user_id: demo.id, server_id: css.id})
+Member.create({user_id: demo.id, server_id: binary.id})
