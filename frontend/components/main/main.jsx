@@ -1,5 +1,5 @@
 import React from 'react';
-import ServersContainer from './servers/servers_container';
+import ServersIndexContainer from './servers/servers_index_container';
 import ChannelsContainer from './channels/channels_container';
 import MessagesContainer from './messages/messages_container';
 import MembersContainer from './members/members_container';
@@ -8,7 +8,7 @@ import MembersContainer from './members/members_container';
 export default () => {
   return (
     <div className='main'>
-      <ServersContainer />
+      <ServersIndexContainer />
       <ChannelsContainer />
       <MessagesContainer />
       <MembersContainer />
