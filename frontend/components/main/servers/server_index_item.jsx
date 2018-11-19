@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default (props) => {
+export default ({server}) => {
   return (
-    <li>
-      { props.server.server_name }
+    <li className="serverIndexItem">
+      <img src={server.photo_url} alt="" title={server.server_name} />
+      <span className='serverLabel'>{server.server_name}</span>
     </li>
   );
 };

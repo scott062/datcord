@@ -39,3 +39,41 @@ html, body, .main {
   order: 4;
   overflow-y: scroll;
 }
+
+.serverIndexItem {
+  margin: 10px;
+}
+
+.serverLabel {
+  visibility: hidden;
+  position: absolute;
+}
+
+.serverIndexItem img {
+  border-radius: 50%;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  align-self: center;
+  transition: border-radius .4s;
+}
+
+.serverIndexItem img:hover {
+  border-radius: 25%;
+  background-color: #00b0f4;
+}
+
+.serverLabel:hover {
+  visibility: visible;
+  position: absolute;
+  left: 70px;
+  visibility: visible;
+  background: black;
+  border-radius: 5%;
+  color: #f6f6f7;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 13px;
+  padding: 5px;
+
+}

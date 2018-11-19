@@ -9,27 +9,61 @@ User.destroy_all
 Server.destroy_all
 Member.destroy_all
 
-demo = User.create({email: "demo@email.com", password: "password", username: "demoUser"})
+def add_user_photo(user)
+  file = File.open('app/assets/images/datcord logo.svg')
+  user.photo.attach(io: file, filename: 'datcord logo.svg')
+  user.save!
+end
 
-test = User.create({email: "test@email.com", password: "password", username: "test"})
+def add_server_photo(server)
+  file = File.open('app/assets/images/session_background_scene.jpg')
+  server.photo.attach(io: file, filename: 'session_background_scene.jpg')
+  server.save!
+end
 
-scott = User.create({email: "scott@email.com", password: "password", username: "scott"})
+demo = User.new({email: "demo@email.com", password: "password", username: "demoUser"})
 
-keith = User.create({email: "keith@email.com", password: "password", username: "keith"})
+add_user_photo(demo)
 
-dustin = User.create({email: "dustin@email.com", password: "password", username: "dustin"})
+test = User.new({email: "test@email.com", password: "password", username: "test"})
 
-brittany = User.create({email: "brittany@email.com", password: "password", username: "brittany"})
+add_user_photo(test)
 
-regan = User.create({email: "regan@email.com", password: "password", username: "regan"})
+scott = User.new({email: "scott@email.com", password: "password", username: "scott"})
 
-david = User.create({email: "david@email.com", password: "password", username: "david"})
+add_user_photo(scott)
 
-js = Server.create({admin_id: demo.id, server_name: "JavascriptClub"})
+keith = User.new({email: "keith@email.com", password: "password", username: "keith"})
 
-css = Server.create({admin_id: test.id, server_name: "CSSHaters"})
+add_user_photo(keith)
 
-binary = Server.create({admin_id: scott.id, server_name: "BinaryOrNothing"})
+dustin = User.new({email: "dustin@email.com", password: "password", username: "dustin"})
+
+add_user_photo(dustin)
+
+brittany = User.new({email: "brittany@email.com", password: "password", username: "brittany"})
+
+add_user_photo(brittany)
+
+regan = User.new({email: "regan@email.com", password: "password", username: "regan"})
+
+add_user_photo(regan)
+
+david = User.new({email: "david@email.com", password: "password", username: "david"})
+
+add_user_photo(david)
+
+js = Server.new({admin_id: demo.id, server_name: "JavascriptClub"})
+
+add_server_photo(js)
+
+css = Server.new({admin_id: test.id, server_name: "CSSHaters"})
+
+add_server_photo(css)
+
+binary = Server.new({admin_id: scott.id, server_name: "BinaryOrNothing"})
+
+add_server_photo(binary)
 
 Member.create({user_id: demo.id, server_id: js.id})
 Member.create({user_id: demo.id, server_id: css.id})
