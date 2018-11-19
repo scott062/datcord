@@ -8,6 +8,7 @@
 User.destroy_all
 Server.destroy_all
 Member.destroy_all
+Channel.destroy_all
 
 def add_user_photo(user)
   file = File.open('app/assets/images/datcord logo.svg')
@@ -53,18 +54,28 @@ david = User.new({email: "david@email.com", password: "password", username: "dav
 
 add_user_photo(david)
 
+# JavascriptClub Server
 js = Server.new({admin_id: demo.id, server_name: "JavascriptClub"})
 
 add_server_photo(js)
 
+general1 = Channel.create({channel_name: "General", server_id: js.id, communication_type: 'text'})
+
+#CSSHaters Server
 css = Server.new({admin_id: test.id, server_name: "CSSHaters"})
 
 add_server_photo(css)
 
+general2 = Channel.create({channel_name: "General", server_id: css.id, communication_type: 'text'})
+
+#BinaryOrNothing Server
 binary = Server.new({admin_id: scott.id, server_name: "BinaryOrNothing"})
 
 add_server_photo(binary)
 
+general3 = Channel.create({channel_name: "General", server_id: binary.id, communication_type: 'text'})
+
+#Members Join Table
 Member.create({user_id: demo.id, server_id: js.id})
 Member.create({user_id: demo.id, server_id: css.id})
 Member.create({user_id: demo.id, server_id: binary.id})
