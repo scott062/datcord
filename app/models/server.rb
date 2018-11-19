@@ -22,6 +22,8 @@ class Server < ApplicationRecord
     foreign_key: :server_id,
     class_name: :Channel
 
+  has_one_attached :photo
+
 
   def ensure_avatar_url
     self.avatar_url ||= self.server_name[0]
