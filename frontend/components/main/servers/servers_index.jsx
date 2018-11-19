@@ -1,30 +1,26 @@
 import React from 'react';
-import ServerItem from './server_item';
+import ServerIndexItem from './server_index_item';
 
 class ServerIndex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
-    debugger
     this.props.fetchServers();
   }
 
   render() {
     const { servers } = this.props;
-    let renderServerIndex;
+    let renderServerIndexItem;
     if (servers) {
-      renderServerIndex = (Object.values(servers).map(server => (
-        <ServerItem
+      renderServerIndexItem = (Object.values(servers).map(server => (
+        <ServerIndexItem
           key={server.id}
-          server={server} />
+          server={ server } />
       )));
     }
     return (
       <div className='serverListContainer'>
         <ul>
-          {renderServerIndex}
+          {renderServerIndexItem}
         </ul>
       </div>
     )

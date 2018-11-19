@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ServersIndex from './servers_index';
+import ServerIndex from './servers_index';
 import { fetchServers } from '../../../actions/server_actions';
 
 const msp = (state) => {
@@ -15,4 +15,4 @@ const mdp = (dispatch) => {
   }
 };
 
-export default connect(msp, mdp)(ServersIndex);
+export default connect(msp, mdp)(ServerIndex);

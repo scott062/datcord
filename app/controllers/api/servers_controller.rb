@@ -22,6 +22,7 @@ class Api::ServersController < ApplicationController
   end
 
   def index
+    debugger
     @servers = current_user.server_memberships
     if @servers
       render 'api/servers/index'
