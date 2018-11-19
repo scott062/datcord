@@ -61,6 +61,10 @@ add_server_photo(js)
 
 general1 = Channel.create({channel_name: "General", server_id: js.id, communication_type: 'text'})
 
+channelText6 = Channel.create({channel_name: "ForgetSomething;", server_id: js.id, communication_type: 'text'})
+
+channelText7 = Channel.create({channel_name: "Java===JS", server_id: js.id, communication_type: 'text'})
+
 #CSSHaters Server
 css = Server.new({admin_id: test.id, server_name: "CSSHaters"})
 
@@ -68,12 +72,22 @@ add_server_photo(css)
 
 general2 = Channel.create({channel_name: "General", server_id: css.id, communication_type: 'text'})
 
+channelText4 = Channel.create({channel_name: "htmlONLY", server_id: css.id, communication_type: 'text'})
+
+channelText5 = Channel.create({channel_name: "DIVS", server_id: css.id, communication_type: 'text'})
+
 #BinaryOrNothing Server
 binary = Server.new({admin_id: scott.id, server_name: "BinaryOrNothing"})
 
 add_server_photo(binary)
 
 general3 = Channel.create({channel_name: "General", server_id: binary.id, communication_type: 'text'})
+
+channelText1 = Channel.create({channel_name: "10100", server_id: binary.id, communication_type: 'text'})
+
+channelText2 = Channel.create({channel_name: "000", server_id: binary.id, communication_type: 'text'})
+
+channelText3 = Channel.create({channel_name: "111111", server_id: binary.id, communication_type: 'text'})
 
 #Members Join Table
 Member.create({user_id: demo.id, server_id: js.id})

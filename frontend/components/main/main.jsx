@@ -5,7 +5,8 @@ import MessagesContainer from './messages/messages_container';
 import MembersContainer from './members/members_container';
 
 
-export default () => {
+export default (props) => {
+  debugger
   return (
     <div className='main'>
       <ServersIndexContainer />

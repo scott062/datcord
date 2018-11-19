@@ -30,6 +30,15 @@ class Api::ServersController < ApplicationController
     end
   end
 
+  def show
+    @server = Server.find(params[:id])
+    if @server
+      render 'api/servers/show'
+    else
+      render json: @server.errors.full_messages
+    end 
+  end
+
   private
 
   def server_params
