@@ -19,7 +19,6 @@ export const fetchServers = () => (dispatch) => {
 };
 
 export const receiveServers = (servers) => {
-  debugger
   return {
     type: RECEIVE_SERVERS,
     servers
