@@ -6,7 +6,6 @@ import MembersContainer from './members/members_container';
 
 
 export default (props) => {
-  debugger
   return (
     <div className='main'>
       <ServersIndexContainer />

@@ -1,19 +1,5 @@
 class Api::ChannelsController < ApplicationController
 
-  def create
-  end
-
-  def destroy
-  end
-
-  def index
-    @channels 
-  end
-
-  def show
-    @channels
-  end
-
   private
 
   def channel_params
