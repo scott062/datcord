@@ -12,8 +12,7 @@ export const fetchServer = (id) => (dispatch) => {
 };
 
 export const fetchServers = () => (dispatch) => {
-  return
-  (ServerApiUtil.fetchServers().then( (res) => {
+  return (ServerApiUtil.fetchServers().then( (res) => {
     return (dispatch(receiveServers(res)))
   }))
 };
