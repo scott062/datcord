@@ -6,9 +6,13 @@ class ChannelsIndex extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchServer(this.props.match.params.serverId)
+  }
+
   render() {
     const { channels } = this.props;
-    
+
     return (
       <ul>
         {channels.map(channel => (
