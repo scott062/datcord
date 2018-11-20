@@ -3,10 +3,10 @@ import merge from 'lodash/merge'
 
 const serversReducer = (currentState = {}, action) => {
   Object.freeze(currentState)
-  
+
   switch (action.type) {
     case RECEIVE_SERVERS:
-      return merge({}, currentState, action.servers);
+      return merge({}, currentState, action.payload.servers);
     case RECEIVE_SERVER:
       return merge({}, currentState, {[action.server.id]: action.server})
     case REMOVE_SERVER:

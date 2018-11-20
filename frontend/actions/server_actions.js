@@ -17,10 +17,10 @@ export const fetchServers = () => (dispatch) => {
   }))
 };
 
-export const receiveServers = (servers) => {
+export const receiveServers = (payload) => {
   return {
     type: RECEIVE_SERVERS,
-    servers
+    payload
   }
 };
 

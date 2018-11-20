@@ -9,7 +9,7 @@ const channelsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_SERVER:
 
-      return merge({}, state, {action.server.channels}}
+      return merge({}, state, action.server.channels);
 
     default:
       return state;
