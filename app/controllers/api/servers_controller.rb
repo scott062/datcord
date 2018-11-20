@@ -22,7 +22,7 @@ class Api::ServersController < ApplicationController
   # end
 
   def index
-    @servers = current_user.server_memberships
+    @servers = current_user.server_memberships.includes(:channels, :users)
     if @servers
       render 'api/servers/index'
     else
