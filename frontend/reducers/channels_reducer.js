@@ -5,7 +5,7 @@ const channelsReducer = (state = {}, action) => {
   Object.freeze(state);
 
   let channels;
-
+  debugger
   switch (action.type) {
     case RECEIVE_SERVER:
       channels = action.payload.channels
