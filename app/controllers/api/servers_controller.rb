@@ -31,11 +31,8 @@ class Api::ServersController < ApplicationController
   end
 
   def show
-    debugger
     @server = current_user.server_memberships.find(params[:id])
-    @channels = @server.channels
-    @members = @server.users
-    debugger
+
     if @server
       render 'api/servers/show'
     else
