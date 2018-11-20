@@ -25,9 +25,9 @@ class ServerIndex extends React.Component {
       )));
     }
     return (
-      <div className='serverListContainer'>
+      <div className='main'>
         <Route path='/servers/:serverId/channels' component={ChannelIndexContainer} />
-        <ul>
+        <ul className='serversListContainer'>
           {renderServerIndexItem}
         </ul>
       </div>

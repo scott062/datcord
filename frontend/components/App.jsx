@@ -9,7 +9,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => {
   return (
-    <div>
+
 
       <Switch>
         <AuthRoute exact path='/login' component={LoginFormContainer} />
@@ -18,7 +18,7 @@ const App = () => {
         <Route path='/' component={ServerIndexContainer}/>
         <Route path='/servers/:server_id/channels' component={ChannelIndexContainer} />
       </Switch>
-    </div>
+  
   );
 };
 

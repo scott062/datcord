@@ -14,14 +14,16 @@ class ChannelsIndex extends React.Component {
     const { channels } = this.props;
 
     return (
-      <ul>
-        {channels.map(channel => (
-          <ChannelIndexItem
-            key={channel.id}
-            channel={channel} />
-          )
-        )}
-      </ul>
+      <div className="channels_container">
+          <ul>
+            {channels.map(channel => (
+              <ChannelIndexItem
+                key={channel.id}
+                channel={channel} />
+            )
+          )}
+        </ul>
+      </div>
     )
   }
 }

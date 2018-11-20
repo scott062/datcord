@@ -10,7 +10,7 @@ html, body, .main {
   // align-items: stretch;
 }
 
-.servers_container {
+.serversListContainer {
   background-color: #202225;
   flex: 0 0 70px;
   order: 1;
@@ -22,7 +22,17 @@ html, body, .main {
   flex: 0 0 240px;
   order: 2;
   overflow-y: scroll;
+}
 
+.channels_container ul li span {
+  font-family: 'Catamaran', sans-serif;
+
+  color: #7c7d80;
+  font-size: 15px;
+}
+
+.channels_container ul li span:hover {
+  color: #f6f6f7;
 }
 
 .messages_container {
