@@ -31,12 +31,13 @@ class Api::ServersController < ApplicationController
   end
 
   def show
-    server = Server.find(params[:id])
+    @server = current_user.server_memberships.find(params[:id])
     @channels = server.channels
-    if @channels
-      render 'api/channels/index'
+    @members = server.users
+    if @server
+      render 'api/servers/show'
     else
-      render json: ['There are no channels.']
+      render json: @server.errors.full_messages
     end
   end
 
