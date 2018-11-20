@@ -1,6 +1,4 @@
-json.set! server do
-  json.partial! 'api/servers/server', server: @server
-end
+json.partial! 'api/servers/server', server: @server
 
 json.set! channels do
   json.partial! 'api/channels/channel', channels: @server.channels
