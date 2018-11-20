@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { fetchServer } from '../../../actions/server_actions';
+import ChannelIndexContainer from '../channels/channels_container';
 
 export default ({server}) => {
   return (
@@ -11,3 +12,7 @@ export default ({server}) => {
     </li>
   );
 };
+
+
+import { Route, Switch } from 'react-router-dom';
+<Route path='/servers/:server_id/channels' component={ChannelIndexContainer} />
