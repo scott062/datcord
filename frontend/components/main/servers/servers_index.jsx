@@ -17,7 +17,8 @@ class ServerIndex extends React.Component {
       renderServerIndexItem = (Object.values(servers).map(server => (
         <ServerIndexItem
           key={server.id}
-          server={ server } />
+          server={ server }
+          fetchServer = { this.props.fetchServer }/>
       )));
     }
     return (

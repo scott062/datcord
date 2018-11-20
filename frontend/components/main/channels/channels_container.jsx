@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import channelsIndex from './channels_index';
+import ChannelsIndex from './channels_index';
 
 const msp = (state) => {
   const channels = state.entities.channels;
@@ -10,7 +10,7 @@ const msp = (state) => {
 };
 
 const mdp = (dispatch) => {
-  fetchMessages
+  return
 };
 
-export default connect(msp, mdp)(channelsIndex);
+export default connect(msp, mdp)(ChannelsIndex);

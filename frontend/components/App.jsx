@@ -16,7 +16,7 @@ const App = () => {
         <AuthRoute exact path='/signup' component={SignupFormContainer} />
         <Route path='/servers' component={ServerIndexContainer}/>
         <Route exact path='/' component={ServerIndexContainer}/>
-        <Route path='/servers/:server_id/:channel_id' component={ChannelIndexContainer} />
+        <Route path='/servers/:server_id/channels' component={ChannelIndexContainer} />
       </Switch>
     </div>
   );
