@@ -1,5 +1,8 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+
 import ServerIndexItem from './server_index_item';
+import ChannelIndexContainer from '../channels/channels_container';
 
 class ServerIndex extends React.Component {
   constructor(props) {
@@ -18,11 +21,12 @@ class ServerIndex extends React.Component {
         <ServerIndexItem
           key={server.id}
           server={ server }
-          fetchServer = { this.props.fetchServer }/>
+        />
       )));
     }
     return (
       <div className='serverListContainer'>
+        <Route path='/servers/:serverId/channels' component={ChannelIndexContainer} />
         <ul>
           {renderServerIndexItem}
         </ul>
