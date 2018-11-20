@@ -1,4 +1,5 @@
 import React from 'react';
+import ChannelIndexItem from './channel_index_item';
 
 class ChannelsIndex extends React.Component {
   constructor (props) {
@@ -6,13 +7,18 @@ class ChannelsIndex extends React.Component {
   }
 
   render() {
+    const { channels } = this.props;
     return (
       <ul>
-        <li>Channels</li>
+        {channels.map(channel => (
+          <ChannelIndexItem
+            key={channel.id}
+            channel={channel} />
+          )
+        )}
       </ul>
     )
   }
 }
-
 
 export default ChannelsIndex;
