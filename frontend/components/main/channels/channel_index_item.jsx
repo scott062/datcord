@@ -9,4 +9,4 @@ const ChannelIndexItem = ({ channel }) => {
   );
 };
 
-export default ChannelIndexitem;
+export default ChannelIndexItem;

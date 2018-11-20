@@ -8,6 +8,7 @@ class ChannelsIndex extends React.Component {
 
   render() {
     const { channels } = this.props;
+    
     return (
       <ul>
         {channels.map(channel => (
