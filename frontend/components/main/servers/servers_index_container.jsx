@@ -12,6 +12,7 @@ const msp = (state) => {
 const mdp = (dispatch) => {
   return {
     fetchServers: () => dispatch(fetchServers()),
+    fetchServer: (id) => dispatch(fetchServer(id)),
   }
 };
 

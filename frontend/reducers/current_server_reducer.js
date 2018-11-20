@@ -6,7 +6,7 @@ const currentServerReducer = (currentState = null, action) => {
 
   switch (action.type) {
     case RECEIVE_SERVER:
-      return action.payload.server.id
+      return action.payload.server.id;
 
     default:
       return currentState;

@@ -32,8 +32,8 @@ class Api::ServersController < ApplicationController
 
   def show
     @server = current_user.server_memberships.find(params[:id])
-    @channels = server.channels
-    @members = server.users
+    @channels = @server.channels
+    @members = @server.users
     if @server
       render 'api/servers/show'
     else
