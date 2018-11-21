@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
+
 import MessagesIndexContainer from '../messages/messages_index_container';
 import ChannelIndexItem from './channel_index_item';
 
@@ -20,8 +21,8 @@ class ChannelsIndex extends React.Component {
   }
 
   render() {
-    const { channels } = this.props;
-    if (!this.props.server) return null;
+    const { channels, server, currentUser } = this.props;
+    if (!server || !currentUser) return null;
     return (
       <>
       <Route path='channels/:channelId'
@@ -41,6 +42,11 @@ class ChannelsIndex extends React.Component {
             )
           )}
         </ul>
+        <div className='user_profile'>
+          <img src={currentUser.photo_url} />
+          <span>{currentUser.username}</span>
+          <button onClick={this.props.logout}>Logout</button>
+        </div>
       </div>
       </>
     )

@@ -11,8 +11,8 @@ Member.destroy_all
 Channel.destroy_all
 
 def add_user_photo(user)
-  file = File.open('app/assets/images/datcord logo.svg')
-  user.photo.attach(io: file, filename: 'datcord logo.svg')
+  file = File.open('app/assets/images/logo_url_2.png')
+  user.photo.attach(io: file, filename: 'logo_url_2.png')
   user.save!
 end
 

@@ -4,6 +4,8 @@ import ServerIndex from './servers_index';
 import { fetchServers } from '../../../actions/server_actions';
 
 const msp = (state) => {
+
+
   return {
     servers: state.entities.servers,
   }

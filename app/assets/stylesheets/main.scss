@@ -67,6 +67,7 @@ html, body, .main {
   font-size: 16px;
   font-weight: 600;
   padding-left: 1em;
+  flex-grow: 1;
 }
 
 .channels_container ul li {
@@ -186,4 +187,34 @@ html, body, .main {
 .members_container ul li span:hover {
   color: #f6f6f7;
   background-color: rgb(47, 49, 54);
+}
+
+.user_profile {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  min-width: 240px;
+  flex: 0 2 52px;
+  background-color: #2022254d;
+  padding-left: 10px;
+}
+
+.user_profile img {
+  border-radius: 50%;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+}
+
+.user_profile span {
+  justify-content: flex-end;
+  display: inline-block;
+  align-self: center;
+  padding-left: 10px;
+  font-family: 'Catamaran', sans-serif;
+  color: #7c7d80;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
 }

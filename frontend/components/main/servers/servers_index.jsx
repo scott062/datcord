@@ -15,8 +15,9 @@ class ServerIndex extends React.Component {
   }
 
   render() {
-    const { servers } = this.props;
+    const { servers, currentUser } = this.props;
     let renderServerIndexItem;
+
     if (servers) {
       renderServerIndexItem = (Object.values(servers).map(server => (
         <ServerIndexItem
@@ -33,6 +34,7 @@ class ServerIndex extends React.Component {
         <ul className='serversListContainer'>
           {renderServerIndexItem}
         </ul>
+        
       </div>
     )
   }
