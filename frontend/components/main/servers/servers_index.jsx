@@ -33,8 +33,9 @@ class ServerIndex extends React.Component {
 
         <ul className='serversListContainer'>
           {renderServerIndexItem}
+          {this.props.otherForm}
         </ul>
-        
+
       </div>
     )
   }

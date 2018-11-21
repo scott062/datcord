@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ServerIndex from './servers_index';
 import { fetchServers } from '../../../actions/server_actions';
+import { openModal, closeModal } from '../../../actions/modal_actions';
 
 const msp = (state) => {
 

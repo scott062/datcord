@@ -3,6 +3,8 @@ import { closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
+import ServerFormContainer from './main/servers/server_form_container';
+import ChannelFormContainer from './main/channels/channel_form_container';
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -10,11 +12,13 @@ function Modal({ modal, closeModal }) {
   }
   let component;
   switch (modal) {
-    case 'login':
-      component = <LoginFormContainer />
+    case 'createServer':
+      component= <ServerFormContainer />
       break;
-    case 'signup':
-      component = <SignupFormContainer />
+
+    case 'createChannel':
+      component= <ChannelFormContainer />
+
       break;
 
     default:
