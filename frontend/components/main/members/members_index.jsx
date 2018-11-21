@@ -20,8 +20,9 @@ class MembersIndex extends React.Component {
     const { members } = this.props;
 
     return (
-      <div>
-        <ul>
+      <div className='membersListContainer'>
+        <h3>Members</h3>
+        <ul className='membersListContainer'>
           {members.map(member => (
             <MemberIndexItem
               key={member.id}

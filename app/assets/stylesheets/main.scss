@@ -7,18 +7,18 @@ html, body, .main {
   flex-flow: row nowrap;
   border-color: red;
   min-height: 100vh;
-  // align-items: stretch;
+  align-items: stretch;
 }
 
 .serversListContainer {
-  background-color: #202225;
+  background-color: #202125;
   flex: 0 0 70px;
   order: 1;
   overflow-y: scroll;
 }
 
 .channels_container {
-  background-color: rgba(32,34,37,.6);
+  background-color: #2f3136;
   flex: 0 0 240px;
   order: 2;
   overflow-y: scroll;
@@ -40,14 +40,35 @@ html, body, .main {
   order: 3;
   align-self: stretch;
   overflow-y: scroll;
-
+  float: right;
 }
 
-.members_container {
-  background-color: rgba(32,34,37,.6);
+.membersListContainer {
+  background-color: #2f3136;
   flex: 0 0 240px;
   order: 4;
   overflow-y: scroll;
+}
+
+.memberIndexItem img {
+  border-radius: 50%;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  align-self: center;
+}
+
+.members_container ul li span {
+  font-family: 'Catamaran', sans-serif;
+
+  color: #7c7d80;
+  font-size: 16px;
+}
+
+.members_container ul li span:hover {
+  color: #f6f6f7;
+  background-color: rgb(47, 49, 54);
 }
 
 .serverIndexItem {
