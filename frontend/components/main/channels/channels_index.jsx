@@ -15,6 +15,7 @@ class ChannelsIndex extends React.Component {
 
     return (
       <div className="channels_container">
+        <header><span>{this.props.server_name}</span></header>
           <ul>
             {channels.map(channel => (
               <ChannelIndexItem
