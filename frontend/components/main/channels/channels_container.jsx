@@ -4,9 +4,11 @@ import ChannelsIndex from './channels_index';
 import { fetchServer } from '../../../actions/server_actions';
 
 const msp = (state) => {
-  const channels = state.entities.channels
+  let channels = Object.values(state.entities.channels)
+  channels = channels.filter(channel => channel.server_id === state.ui.current_server);
+
   return {
-    channels: Object.values(channels),
+    channels: channels
 
   }
 };
