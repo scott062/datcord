@@ -6,9 +6,11 @@ import { fetchServer } from '../../../actions/server_actions';
 const msp = (state) => {
   let channels = Object.values(state.entities.channels)
   channels = channels.filter(channel => channel.server_id === state.ui.current_server);
-
+  // debugger
+  let server = state.entities.servers[state.ui.current_server]
   return {
     channels: channels,
+    server: server
   };
 };
 

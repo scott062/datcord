@@ -22,6 +22,52 @@ html, body, .main {
   flex: 0 0 240px;
   order: 2;
   overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.channels_header_parent {
+  display: flex;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  border-bottom:1px solid #00000033;
+  border-width: thin;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.channels_servername_header {
+  color: #fff;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 16px;
+
+  line-height: 48px;
+  text-align: justify;
+}
+
+.text_channels_head_parent {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 12px;
+  display: flex;
+  line-height: 15px;
+  text-align: center;
+  padding-left: 15px;
+}
+
+.text_channels_header {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 600;
+  color: #7c7d80;
+  font-size: 12px;
+}
+
+.channels_ul {
+  font-family: 'Catamaran', sans-serif;
+  color: #7c7d80;
+  font-size: 16px;
+  font-weight: 600;
+
+  padding-left: 1em;
 }
 
 .channels_container ul li {
@@ -42,33 +88,7 @@ html, body, .main {
   float: right;
 }
 
-.membersListContainer {
-  background-color: #2f3136;
-  flex: 0 0 240px;
-  order: 4;
-  overflow-y: scroll;
-}
 
-.memberIndexItem img {
-  border-radius: 50%;
-  display: flex;
-  height: 50px;
-  width: 50px;
-  overflow: hidden;
-  align-self: center;
-}
-
-.members_container ul li span {
-  font-family: 'Catamaran', sans-serif;
-
-  color: #7c7d80;
-  font-size: 16px;
-}
-
-.members_container ul li span:hover {
-  color: #f6f6f7;
-  background-color: rgb(47, 49, 54);
-}
 
 .serverIndexItem {
   margin: 10px;
@@ -94,16 +114,75 @@ html, body, .main {
   background-color: #00b0f4;
 }
 
-.serverLabel:hover {
-  visibility: visible;
-  position: absolute;
-  left: 70px;
-  visibility: visible;
-  background: black;
-  border-radius: 5%;
-  color: #f6f6f7;
-  font-family: 'Catamaran', sans-serif;
-  font-size: 13px;
-  padding: 5px;
+// .serverLabel:hover {
+//   visibility: visible;
+//   position: absolute;
+//   left: 70px;
+//   visibility: visible;
+//   background: black;
+//   border-radius: 5%;
+//   color: #f6f6f7;
+//   font-family: 'Catamaran', sans-serif;
+//   font-size: 13px;
+//   padding: 5px;
+//
+// }
 
+.single_channel_text {
+  padding: 5px;
+  align-self: center;
+}
+
+.single_channel_text:hover {
+  background-color: #42464d;
+  color: #595c62;
+}
+.single_channel_text a {
+  text-decoration: none;
+  color: #727676;
+  font-size: 15px;
+}
+
+.single_channel_text a:focus {
+  background-color: #42464d;
+  color: #f6f6f7;
+}
+
+.channel_header {
+  color: #fff;
+  justify-content: center;
+  min-height: 48;
+  flex: 0, 0, 240px;
+}
+
+.membersListContainer {
+  background-color: #2f3136;
+  flex: 0 0 240px;
+  order: 4;
+  overflow-y: scroll;
+  align-content: center;
+}
+
+.memberIndexItem img {
+  border-radius: 50%;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  align-self: center;
+}
+
+.membersListContainer ul li span {
+  font-family: 'Catamaran', sans-serif;
+  color: #7c7d80;
+  font-size: 16px;
+}
+
+.memberListContiner ul {
+  align-content: center;
+}
+
+.members_container ul li span:hover {
+  color: #f6f6f7;
+  background-color: rgb(47, 49, 54);
 }

@@ -21,18 +21,23 @@ class ChannelsIndex extends React.Component {
 
   render() {
     const { channels } = this.props;
-
+    if (!this.props.server) return null;
     return (
       <>
       <Route path='channels/:channelId'
         component={MessagesIndexContainer}/>
       <div className="channels_container">
-        <header><span>SERVER NAME HERE</span></header>
-          <ul>
-            {channels.map(channel => (
-              <ChannelIndexItem
-                key={channel.id}
-                channel={channel} />
+        <div className='channels_header_parent'>
+          <span className='channels_servername_header'>{this.props.server.server_name}</span>
+        </div>
+        <div className='text_channels_head_parent'>
+          <span className='text_channels_header'>TEXT CHANNELS</span>
+        </div>
+        <ul className='channels_ul'>
+          {channels.map(channel => (
+            <ChannelIndexItem
+              key={channel.id}
+              channel={channel} />
             )
           )}
         </ul>
