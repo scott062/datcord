@@ -24,14 +24,13 @@ html, body, .main {
   overflow-y: scroll;
 }
 
-.channels_container ul li span {
+.channels_container ul li {
   font-family: 'Catamaran', sans-serif;
-
   color: #7c7d80;
   font-size: 16px;
 }
 
-.channels_container ul li span:hover {
+.channels_container ul li:hover {
   color: #f6f6f7;
 }
 

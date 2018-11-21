@@ -1,8 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default () => {
-  return (
-    <div className='messages_container'>
-    </div>
-  )
-}
+import MessagesIndex from './messages_index';
+
+const msp = (state) => {
+  return {
+
+  }
+};
+
+const mdp = (dispatch) => {
+  return {
+
+  }
+};
+
+export default connect(msp, mdp)(MessagesIndex);

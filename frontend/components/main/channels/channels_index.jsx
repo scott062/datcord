@@ -27,7 +27,7 @@ class ChannelsIndex extends React.Component {
       <Route path='channels/:channelId'
         component={MessagesIndexContainer}/>
       <div className="channels_container">
-        <header><span>{this.props.server_name}</span></header>
+        <header><span>SERVER NAME HERE</span></header>
           <ul>
             {channels.map(channel => (
               <ChannelIndexItem
