@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ChannelIndexItem = ({ channel }) => {
   return (
     <li>
-      <span>{channel.channel_name}</span>
+      <span>#{channel.channel_name}</span>
     </li>
   );
 };

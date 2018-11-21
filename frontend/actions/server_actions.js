@@ -6,6 +6,7 @@ export const REMOVE_SERVER = 'REMOVE_SERVER';
 
 
 export const fetchServer = (id) => (dispatch) => {
+
   return (ServerApiUtil.fetchServer(id).then( (res) => {
        return (dispatch(receiveServer(res)))
      }))

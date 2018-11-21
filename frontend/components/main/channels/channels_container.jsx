@@ -8,9 +8,8 @@ const msp = (state) => {
   channels = channels.filter(channel => channel.server_id === state.ui.current_server);
 
   return {
-    channels: channels
-
-  }
+    channels: channels,
+  };
 };
 
 const mdp = (dispatch) => {
