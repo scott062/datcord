@@ -1,6 +1,8 @@
 import React from 'react';
-import ChannelIndexItem from './channel_index_item';
 import { Route } from 'react-router-dom';
+
+import MessagesIndexContainer from '../messages/messages_index_container';
+import ChannelIndexItem from './channel_index_item';
 
 class ChannelsIndex extends React.Component {
   constructor (props) {
@@ -22,7 +24,7 @@ class ChannelsIndex extends React.Component {
 
     return (
       <>
-      <Route path=':channelId'
+      <Route path='channels/:channelId'
         component={MessagesIndexContainer}/>
       <div className="channels_container">
         <header><span>{this.props.server_name}</span></header>
