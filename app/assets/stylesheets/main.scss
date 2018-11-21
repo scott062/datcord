@@ -218,3 +218,17 @@ html, body, .main {
   font-weight: 400;
   display: inline-block;
 }
+
+.logout_button {
+  border-radius: 10%;
+  background-color: #2b2c31;
+  text-decoration: none;
+  border: none;
+  color: rgb(240, 71, 71);
+  margin-left: 50px;
+}
+
+.logout_button:hover {
+  background-color: rgba(240, 71, 71, 0.1);
+  cursor: pointer;
+}

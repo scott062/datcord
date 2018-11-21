@@ -14,11 +14,11 @@ const App = () => {
       <Switch>
         <AuthRoute exact path='/login' component={LoginFormContainer} />
         <AuthRoute exact path='/signup' component={SignupFormContainer} />
-        <Route path='/servers' component={ServerIndexContainer}/>
+        <ProtectedRoute path='/servers' component={ServerIndexContainer}/>
         <Route path='/' component={ServerIndexContainer}/>
-        <Route path='/servers/:server_id/channels' component={ChannelIndexContainer} />
+        <ProtectedRoute path='/servers/:server_id/channels' component={ChannelIndexContainer} />
       </Switch>
-  
+
   );
 };
 

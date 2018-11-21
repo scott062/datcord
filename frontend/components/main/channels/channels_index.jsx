@@ -45,7 +45,7 @@ class ChannelsIndex extends React.Component {
         <div className='user_profile'>
           <img src={currentUser.photo_url} />
           <span>{currentUser.username}</span>
-          <button onClick={this.props.logout}>Logout</button>
+          <button className='logout_button' onClick={this.props.logout}>Logout</button>
         </div>
       </div>
       </>
