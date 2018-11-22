@@ -3,7 +3,7 @@ import ServerIndexContainer from './main/servers/servers_index_container';
 import ChannelIndexContainer from './main/channels/channels_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
-import MainComponent from './main/main';
+
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal';
