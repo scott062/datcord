@@ -6,6 +6,8 @@ class ChannelForm extends React.Component {
     super(props);
     this.state = {
       channelName: '',
+      serverId: this.props.match.params.serverId,
+      communication_type: 'voice',
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
