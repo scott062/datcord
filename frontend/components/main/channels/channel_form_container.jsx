@@ -12,7 +12,7 @@ const msp = (state) => {
 
 const mdp = (dispatch) => {
   return {
-    processForm: (channelDetails) => dispatch(createServer(channelDetails)),
+    processForm: (channelDetails) => dispatch(createChannel(channelDetails)),
 
     closeModal: () => dispatch(closeModal()),
   };
