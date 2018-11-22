@@ -1,11 +1,17 @@
 class Api::ChannelsController < ApplicationController
-
   def create
     @channel = Channel.new(channel_params)
     if @channel.save
-      render 'api/channels/show'
-    else
-      render json: @channel.errors.full_messages
+      serialized_data = ActiveModelSerializers::Adapter::Json.new(ChannelsSerializer.new(channel)).serialize_hash
+      ActionCable.server.broadcast 'channels_channel', serialized_data
+      head :ok
+    end
+  end
+
+  def show
+    @channel = Channel.find(params[:id])
+    if @channel
+      render json: @channel
     end
   end
 
