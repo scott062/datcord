@@ -1,6 +1,6 @@
 class Message < ApplicationRecord
   validates :body, :author_id, :channel_id, :channel_type, presence: true
-  validates_inclusion_of :channel_type in: ['Private Message', 'Channel']
+  validates :channel_type, inclusion: { in: ['Private Message', 'Channel']}
 
   belongs_to :author,
     primary_key: :id,
