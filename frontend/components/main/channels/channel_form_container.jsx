@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
 import React from 'react';
+import { connect } from 'react-redux';
 import { createChannel } from '../../../actions/channel_actions';
 import { openModal, closeModal } from '../../../actions/modal_actions';
-import ChannelForm from './channel_form.jsx';
+import ChannelForm from './channel_form';
 
 const msp = (state) => {
   return {

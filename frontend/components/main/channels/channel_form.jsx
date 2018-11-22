@@ -45,6 +45,6 @@ class ChannelForm extends React.Component {
       </div>
     )
   }
-}
+};
 
 export default ChannelForm;
