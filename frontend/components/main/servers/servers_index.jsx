@@ -33,7 +33,7 @@ class ServerIndex extends React.Component {
 
         <ul className='serversListContainer'>
           {renderServerIndexItem}
-          {this.props.otherForm}
+          <button className='plus_button' onClick={this.props.otherForm}><span className='plus'>+</span></button>
         </ul>
 
       </div>

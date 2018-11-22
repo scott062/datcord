@@ -232,3 +232,120 @@ html, body, .main {
   background-color: rgba(240, 71, 71, 0.1);
   cursor: pointer;
 }
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plus_button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-decoration: none;
+  background-color: #202125;
+  border-color: #72767d;
+  border-style: dashed;
+  color: #72767d;
+  border-radius: 50%;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  font-size: 100%;
+  overflow: hidden;
+  vertical-align: middle;
+  align-self: center;
+  text-align: center;
+  margin: 10px;
+  transition: border-color .1s ease-in;
+  cursor: pointer;
+}
+
+.plus_button:hover {
+  border-color: #fff;
+  color: #fff;
+
+}
+
+.plus {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 100;
+  padding-bottom: 5px;
+}
+
+.server_form_div_par {
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+
+  min-height: 420px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.server_form_header {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 800;
+  color: #7289DA;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.server_form_subhead {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 800;
+  color: #99aab5;
+  margin: 5px 100px 30px 100px;
+  display: block;
+  text-align: center;
+}
+
+.create_server_button[type="submit"] {
+  border-radius: 3px;
+  background-color: #7289DA;
+  color: #fff;
+  height: 36px;
+  min-width: 70px;
+  font-weight: 400;
+  padding: 8px 0px 30px 0px;
+  transition: background-color .2s ease-in;
+  cursor: pointer;
+  float: right;
+}
+
+.create_server_button[type="submit"]:hover {
+  background-color: #4e5d94;
+}
+
+.server_form_div_par form label {
+  text-transform: uppercase;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 800;
+  color: #87909c;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.server_form_div_par form input {
+  width: 242px;
+  height: 37px;
+  display: block;
+}

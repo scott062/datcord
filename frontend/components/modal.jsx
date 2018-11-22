@@ -1,8 +1,6 @@
 import React from 'react';
 import { closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
-import LoginFormContainer from './session_form/login_form_container';
-import SignupFormContainer from './session_form/signup_form_container';
 import ServerFormContainer from './main/servers/server_form_container';
 import ChannelFormContainer from './main/channels/channel_form_container';
 
@@ -13,20 +11,18 @@ function Modal({ modal, closeModal }) {
   let component;
   switch (modal) {
     case 'createServer':
-      component= <ServerFormContainer />
+      component= <ServerFormContainer />;
       break;
-
     case 'createChannel':
-      component= <ChannelFormContainer />
-
+      component= <ChannelFormContainer />;
       break;
 
     default:
       return null;
   }
   return (
-    <div class="modal-background" onClick={closeModal}>
-      <div class="modal-child" onClick={e => e.stopPropagation()}>
+    <div className="modal-background" onClick={closeModal}>
+      <div className="modal-child" onClick={e => e.stopPropagation()}>
         { component }
       </div>
     </div>

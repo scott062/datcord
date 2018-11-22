@@ -6,11 +6,12 @@ import SignupFormContainer from './session_form/signup_form_container';
 import MainComponent from './main/main';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Modal from './modal';
 
 const App = () => {
   return (
-
-
+    <div>
+      <Modal />
       <Switch>
         <AuthRoute exact path='/login' component={LoginFormContainer} />
         <AuthRoute exact path='/signup' component={SignupFormContainer} />
@@ -18,6 +19,8 @@ const App = () => {
         <Route path='/' component={ServerIndexContainer}/>
         <ProtectedRoute path='/servers/:server_id/channels' component={ChannelIndexContainer} />
       </Switch>
+    </div>
+
 
   );
 };

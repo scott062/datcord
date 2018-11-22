@@ -1,21 +1,21 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { createServer } from '../../../actions/server_actions';
+import { createChannel } from '../../../actions/channel_actions';
 import { openModal, closeModal } from '../../../actions/modal_actions';
-import ServerForm from './server_form.jsx';
+import ChannelForm from './channel_form.jsx';
 
 const msp = (state) => {
   return {
-    formType: 'createServer',
+    formType: 'createChannel',
   };
 };
 
 const mdp = (dispatch) => {
   return {
-    processForm: (serverDetails) => dispatch(createServer(serverDetails)),
-    
+    processForm: (channelDetails) => dispatch(createServer(channelDetails)),
+
     closeModal: () => dispatch(closeModal()),
   };
 };
 
-export default connect(msp, mdp)(ServerForm);
+export default connect(msp, mdp)(ChannelForm);

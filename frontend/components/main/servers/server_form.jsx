@@ -5,8 +5,8 @@ class ServerForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      serverName = '',
-      serverRegion = 'US EAST',
+      serverName: '',
+      serverRegion: 'US EAST',
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -28,9 +28,9 @@ class ServerForm extends React.Component {
         <header className='server_form_header'>
           Create Your Server
         </header>
-        <h3 className='server_form_subhead'>
+        <p className='server_form_subhead'>
           By creating a server, you will have access to free text chat to use amongst your friends.
-        </h3>
+        </p>
         <form onSubmit={this.handleSubmit}>
           <label>
             Server Name
@@ -47,10 +47,13 @@ class ServerForm extends React.Component {
               value={this.props.serverRegion} />
           </label>
           <input
+            className='create_server_button'
             type='submit'
-            value={this.props.formType} />
+            value='Create' />
         </form>
       </div>
     )
   }
 }
+
+export default ServerForm;
