@@ -6,7 +6,6 @@ class ChannelForm extends React.Component {
     super(props);
     this.state = {
       channel_name: '',
-      server_id: this.props.match.params.serverId,
       communication_type: 'voice',
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,7 +26,8 @@ class ChannelForm extends React.Component {
     return (
       <div className='channel_form_div_par'>
         <header className='channel_form_header'>
-          Create Your Channel
+          Create Text Channel
+          <p>in Text Channels</p>
         </header>
 
         <form onSubmit={this.handleSubmit}>
@@ -39,10 +39,30 @@ class ChannelForm extends React.Component {
               value={this.props.channelName}
               onChange={this.update('channel_name')} />
           </label>
+
+          <label>
+            Text Channel
+            <input
+              checked="checked"
+              name="communication_type"
+              className='channel_name_input'
+              type='radio'
+              value='text'
+              onChange={this.update('communication_type')} />
+          </label>
+          <label>
+            Voice Channel
+            <input
+              className='channel_name_input'
+              name="communication_type"
+              type='radio'
+              value='voice'
+              onChange={this.update('channel_name')} />
+          </label>
           <input
             className='create_channel_button'
             type='submit'
-            value='Create' />
+            value='Create Channel' />
         </form>
       </div>
     )

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ChannelsIndex from './channels_index';
+import { openModal } from '../../../actions/modal_actions';
 import { fetchServer } from '../../../actions/server_actions';
 import { logout } from '../../../actions/session_actions';
 
@@ -21,7 +22,8 @@ const msp = (state) => {
 const mdp = (dispatch) => {
   return {
     fetchServer: (id) => dispatch(fetchServer(id)),
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    otherForm: () => dispatch(openModal('createChannel'))
   }
 };
 

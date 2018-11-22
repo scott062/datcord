@@ -32,7 +32,7 @@ class ChannelsIndex extends React.Component {
           <span className='channels_servername_header'>{this.props.server.server_name}</span>
         </div>
         <div className='text_channels_head_parent'>
-          <span className='text_channels_header'>TEXT CHANNELS</span>
+          <span className='text_channels_header'>TEXT CHANNELS</span><button onClick={this.props.otherForm} className='channel_add_button'><span className='channel_add_plus'>+</span></button>
         </div>
         <ul className='channels_ul'>
           {channels.map(channel => (

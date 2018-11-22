@@ -4,9 +4,10 @@ import { createChannel } from '../../../actions/channel_actions';
 import { openModal, closeModal } from '../../../actions/modal_actions';
 import ChannelForm from './channel_form';
 
-const msp = (state) => {
+const msp = (state, ownProps) => {
   return {
     formType: 'createChannel',
+    server_id: state.entities.current_server,
   };
 };
 

@@ -5,8 +5,6 @@ import { fetchServers } from '../../../actions/server_actions';
 import { openModal, closeModal } from '../../../actions/modal_actions';
 
 const msp = (state) => {
-
-
   return {
     servers: state.entities.servers,
   }
