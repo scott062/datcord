@@ -4,9 +4,8 @@ import { RECEIVE_CHANNEL } from '../actions/channel_actions';
 
 const channelsReducer = (state = {}, action) => {
   Object.freeze(state);
-  debugger
-  let channels;
 
+  let channels;
   switch (action.type) {
     case RECEIVE_SERVER:
       channels = action.payload.channels
