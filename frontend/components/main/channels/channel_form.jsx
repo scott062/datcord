@@ -37,12 +37,6 @@ class ChannelForm extends React.Component {
               value={this.props.channelName}
               onChange={this.update('channelName')} />
           </label>
-          <label>
-            Channel Region
-            <input
-              className='channel_region_input'
-              value={this.props.channelRegion} />
-          </label>
           <input
             className='create_channel_button'
             type='submit'
