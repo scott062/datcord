@@ -5,8 +5,8 @@ class ChannelForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      channelName: '',
-      serverId: this.props.match.params.serverId,
+      channel_name: '',
+      server_id: this.props.match.params.serverId,
       communication_type: 'voice',
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,7 +37,7 @@ class ChannelForm extends React.Component {
               className='channel_name_input'
               type='text'
               value={this.props.channelName}
-              onChange={this.update('channelName')} />
+              onChange={this.update('channel_name')} />
           </label>
           <input
             className='create_channel_button'
