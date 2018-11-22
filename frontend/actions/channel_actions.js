@@ -25,10 +25,10 @@ export const receiveChannels = (payload) => {
   }
 };
 
-export const receiveChannel = (payload) => {
+export const receiveChannel = (channel) => {
   return {
     type: RECEIVE_CHANNEL,
-    payload
+    channel
   }
 };
 

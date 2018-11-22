@@ -2,14 +2,20 @@ class Api::ServersController < ApplicationController
 
   before_action :require_login
 
-  # def create
-  #   @server = Server.new(server_params)
-  #   if @server.save
-  #     render 'api/servers/show'
-  #   else
-  #     render json: @server.errors.full_messages
-  #   end
-  # end
+  def create
+    @server = Server.new(server_params)
+    @server.admin_id = current_user.id
+
+    file = File.open('app/assets/images/session_background_scene.jpg')
+    @server.photo.attach(io: file, filename: 'session_background_scene.jpg')
+    if @server.save
+      Member.create!({user_id: current_user.id, server_id: @server.id})
+      Channel.create!({channel_name: "General", server_id: @server.id, communication_type: 'text'})
+      render 'api/servers/show'
+    else
+      render json: @server.errors.full_messages
+    end
+  end
 
   # def destroy
   #   @server = Server.find(params[:id])
@@ -46,7 +52,7 @@ class Api::ServersController < ApplicationController
     params.require(:server).permit(
       :server_name,
       :server_id,
-      :avatar_url
+      :avatar_url,
     )
   end
 end

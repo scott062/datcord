@@ -12,11 +12,11 @@ export const fetchServer = (id) => {
   });
 };
 
-export const createServer = (serverDetails) => {
+export const createServer = (server) => {
   return $.ajax({
     method: 'POST',
     url: 'api/servers',
-    serverDetails
+    data: { server }
   });
 };
 

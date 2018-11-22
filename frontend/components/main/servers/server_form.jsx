@@ -5,8 +5,9 @@ class ServerForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      serverName: '',
-      serverRegion: 'US EAST',
+      server_name: '',
+      server_region: 'US EAST',
+      admin_id: this.props.admin_id,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -14,6 +15,7 @@ class ServerForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const serverDetails = Object.assign({}, this.state);
+    this.props.processForm(serverDetails);
   }
 
   update(field) {
@@ -37,14 +39,14 @@ class ServerForm extends React.Component {
             <input
               className='server_name_input'
               type='text'
-              value={this.props.serverName}
-              onChange={this.update('serverName')} />
+              value={this.props.server_name}
+              onChange={this.update('server_name')} />
           </label>
           <label>
             Server Region
             <input
               className='server_region_input'
-              value={this.props.serverRegion} />
+              value={this.props.server_region} />
           </label>
           <input
             className='create_server_button'

@@ -3,7 +3,7 @@ import merge from 'lodash/merge'
 
 const serversReducer = (currentState = {}, action) => {
   Object.freeze(currentState)
-
+  debugger
   switch (action.type) {
     case RECEIVE_SERVERS:
       return merge({}, currentState, action.payload.servers);

@@ -7,6 +7,7 @@ class ChannelForm extends React.Component {
     this.state = {
       channel_name: '',
       communication_type: 'voice',
+      server_id: props.server_id,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -14,6 +15,7 @@ class ChannelForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const channelDetails = Object.assign({}, this.state);
+    this.props.processForm(channelDetails);
   }
 
   update(field) {

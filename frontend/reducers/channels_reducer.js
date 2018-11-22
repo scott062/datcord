@@ -4,7 +4,7 @@ import { RECEIVE_CHANNEL } from '../actions/channel_actions';
 
 const channelsReducer = (state = {}, action) => {
   Object.freeze(state);
-
+  debugger
   let channels;
 
   switch (action.type) {

@@ -5,15 +5,17 @@ import { openModal, closeModal } from '../../../actions/modal_actions';
 import ServerForm from './server_form.jsx';
 
 const msp = (state) => {
+  debugger
   return {
     formType: 'createServer',
+    admin_id: state.session.currentUserId,
   };
 };
 
 const mdp = (dispatch) => {
   return {
     processForm: (serverDetails) => dispatch(createServer(serverDetails)),
-    
+
     closeModal: () => dispatch(closeModal()),
   };
 };

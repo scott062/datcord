@@ -32,8 +32,9 @@ export const receiveServer = (payload) => {
   }
 };
 
-export const createServer = (serverDetails) => (dispatch) => {
-  (ServerApiUtil.createServer(serverDetails).then((res) => {
+export const createServer = (server) => (dispatch) => {
+  debugger
+  (ServerApiUtil.createServer(server).then((res) => {
        return (dispatch(receiveServer(res)))
      }))
 };

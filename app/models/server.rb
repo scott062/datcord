@@ -28,4 +28,5 @@ class Server < ApplicationRecord
   def ensure_avatar_url
     self.avatar_url ||= self.server_name[0]
   end
+
 end
