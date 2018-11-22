@@ -1,6 +1,5 @@
 import * as MessageApiUtil from '../util/message_api_util';
 
-export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
 export const RECEIVE_MESSAGES = 'RECEIVE_MESSAGES';
 
 
@@ -15,20 +14,6 @@ export const fetchMessages = () => (dispatch) => {
   return (MessageApiUtil.fetchMessages().then( (res) => {
     return (dispatch(receiveMessages(res)))
   }))
-};
-
-export const receiveMessages = (payload) => {
-  return {
-    type: RECEIVE_MESSAGES,
-    payload
-  }
-};
-
-export const receiveMessage = (message) => {
-  return {
-    type: RECEIVE_MESSAGE,
-    message
-  }
 };
 
 export const createMessage = (messageDetails) => (dispatch) => {
