@@ -348,6 +348,16 @@ html, body, .main {
   width: 242px;
   height: 37px;
   display: block;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.server_form_div_par form input:focus {
+  border: none;
+  border-bottom: 2px solid #7289DA;
 }
 
 .channel_form_div_par {
