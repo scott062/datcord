@@ -15,7 +15,7 @@ class ChannelForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const channelDetails = Object.assign({}, this.state);
-    this.props.processForm(channelDetails);
+    return this.props.processForm(channelDetails).then(this.props.closeModal, this.props.closeModal);
   }
 
   update(field) {

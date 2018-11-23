@@ -15,7 +15,8 @@ class ServerForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const serverDetails = Object.assign({}, this.state);
-    this.props.processForm(serverDetails);
+    this.props.processForm(serverDetails).then(this.props.closeModal, this.props.closeModal);
+
   }
 
   update(field) {
