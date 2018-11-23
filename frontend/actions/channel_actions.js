@@ -5,9 +5,9 @@ export const RECEIVE_CHANNELS = 'RECEIVE_CHANNELS';
 export const REMOVE_CHANNEL = 'REMOVE_CHANNEL';
 
 
-export const fetchChannel = (id) => (dispatch) => {
+export const fetchChannel = (server_id, channel_id) => (dispatch) => {
 
-  return (ChannelApiUtil.fetchChannel(id).then( (res) => {
+  return (ChannelApiUtil.fetchChannel(server_id, channel_id).then( (res) => {
        return (dispatch(receiveChannel(res)))
      }))
 };
@@ -25,10 +25,10 @@ export const receiveChannels = (payload) => {
   }
 };
 
-export const receiveChannel = (channel) => {
+export const receiveChannel = (payload) => {
   return {
     type: RECEIVE_CHANNEL,
-    channel
+    payload
   }
 };
 

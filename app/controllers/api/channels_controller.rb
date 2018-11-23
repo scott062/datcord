@@ -11,8 +11,8 @@ class Api::ChannelsController < ApplicationController
   def show
     @channel = Channel.find(params[:id])
     @messages = @channel.messages
-    if @messages
-      render 'api/messages/index'
+    if @channel
+      render 'api/channels/show'
     else
       render json: @messages.errors.full_messages
     end

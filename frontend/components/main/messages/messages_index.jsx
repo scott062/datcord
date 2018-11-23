@@ -2,12 +2,9 @@ import React from 'react';
 import MessageFormContainer from './message_form_container';
 
 class MessagesIndex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
-    this.fetchChannels(this.props.match.params.channel_id);
+    this.fetchChannels(this.props.current_server, this.props.match.params.channel_id);
   }
 
   render() {

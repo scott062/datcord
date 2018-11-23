@@ -5,7 +5,8 @@ import MessagesIndex from './messages_index';
 
 const msp = (state) => {
   return {
-    messages: state.entities.messages
+    messages: state.entities.messages,
+    current_server: state.entites.current_server,
   }
 };
 
