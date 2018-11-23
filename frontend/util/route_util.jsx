@@ -8,6 +8,7 @@ const Auth = ({ component: Component, path, loggedIn, exact}) => {
         !loggedIn ? (
           <Component {...props} />
         ) : (
+
           <Redirect to='/servers' />
         )
       )}/>
@@ -28,8 +29,11 @@ const Protected = ({ component: Component, path, loggedIn, exact}) => {
 
 
 const msp = (state) => {
+
+  // let server_id = Object.values(state.entities.users)[0].server_memberships[0]
   return {
-    loggedIn: Boolean(state.session.currentUserId)
+    loggedIn: Boolean(state.session.currentUserId),
+    // general: `/${server_id}/`,
   };
 };
 
