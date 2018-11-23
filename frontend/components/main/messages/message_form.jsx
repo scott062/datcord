@@ -27,15 +27,15 @@ class MessageForm extends React.Component {
     return (
       <div className='message_form_div_par'>
         <form onSubmit={this.handleSubmit}>
-          <input
+          <textarea
             className='body_input'
             type='text'
-            value={this.props.body}
+            placeholder='Type Message to Channel Here'
             onChange={this.update('body')} />
-          <input
+          <button
             className='create_message_button'
             type='submit'
-            value='Create' />
+            value='Create'><div className='plus_button_message'>+</div></button>
         </form>
       </div>
     )

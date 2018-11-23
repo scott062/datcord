@@ -80,14 +80,128 @@ html, body, .main {
   color: #f6f6f7;
 }
 
-.messages_container {
-  flex: 4, 4, 200px;
+.message_parent_div {
+  flex: 4 4 200px;
   order: 3;
   align-self: stretch;
   overflow-y: scroll;
   float: right;
+  display: flex;
+  flex-direction: column;
 }
 
+.message_header_parent {
+  display: flex;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  border-bottom:1px solid #00000033;
+  border-width: thin;
+  margin-bottom: 20px;
+  justify-content: left;
+  padding-left: 50px;
+}
+
+.message_header_parent span {
+  color: #fff;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 48px;
+  text-align: justify;
+}
+
+
+.messages_ul {
+  flex-grow: 2;
+  color: #dcddde;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 0.9375rem;
+  word-wrap: break-word;
+  margin: 20px 20px 20px 20px;
+}
+
+.messages_ul li {
+  margin: 15px 10px 15px 30px;
+}
+
+.message_parent_div form {
+  height: 95px;
+  max-width: 849px;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  margin-bottom: 15px;
+
+}
+
+.body_input {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  text-decoration: none;
+
+  flex: 2 2 auto;
+  order: 2;
+  background-color: #484c51;
+  font-family: 'Catamaran', sans-serif;
+  color: #ffffffb3;
+  margin: 20px 15px 20px 0px;
+  width: 100%;
+  border-radius: 0px 5px 5px 0px;
+  line-height: 100%;
+  padding: 22px;
+  font-size: 0.9375rem;
+}
+
+.body_input textarea {
+  margin: 2px 2px 2px 0px;
+  font-family: 'Catamaran', sans-serif;
+  color: #ffffffb3;
+  font-size: 0.9375rem;
+  height: auto;
+  padding: 10px;
+  padding-left: none;
+}
+
+.plus_button_message {
+  background-color: #484c51;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 100%;
+  background-color: #fff;
+  align-self: center;
+  border-radius: 50%;
+  color: #ffffffb3;
+  opacity: 3;
+}
+
+.create_message_button {
+
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  text-decoration: none;
+
+  flex: 0 0 40px;
+  order: 1;
+  background-color: #484c51;
+
+  background-color: #484c51;
+  font-family: 'Catamaran', sans-serif;
+  color: #ffffffb3;
+  margin: 20px 0px 20px 10px;
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+  line-height: 100%;
+  padding: 22px;
+  font-size: 0.9375rem;
+}
 
 
 .serverIndexItem {
@@ -383,12 +497,14 @@ html, body, .main {
   text-align: left;
   justify-content: left;
   position: relative;
+  text-transform: uppercase;
 }
 
 .channel_form_header p {
   font-weight: 100;
   font-size: 12px;
   margin-top: 5px;
+  text-transform: capitalize;
 }
 
 .channel_form_div_par label {

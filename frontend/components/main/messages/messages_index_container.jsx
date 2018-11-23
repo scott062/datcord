@@ -8,10 +8,12 @@ const msp = (state, ownProps) => {
 
   messages = messages.filter(message => message.channel_id === parseInt(ownProps.match.params.channelId))
 
+  const channelName = state.entities.channels[ownProps.match.params.channelId].channel_name;
 
   return {
     messages: messages,
     current_server: ownProps.match.params.serverId,
+    channelName: channelName,
   }
 };
 
