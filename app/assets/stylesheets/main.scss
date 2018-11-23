@@ -274,8 +274,10 @@ html, body, .main {
   flex: 0 0 240px;
   order: 4;
   overflow-y: scroll;
-  align-content: center;
+  justify-content: center;
 }
+
+
 
 .memberIndexItem img {
   border-radius: 50%;
@@ -285,6 +287,7 @@ html, body, .main {
   overflow: hidden;
   vertical-align: middle;
   display: inline-block;
+  margin: 8px;
 }
 
 .membersListContainer ul li span {
@@ -588,4 +591,17 @@ html, body, .main {
   color: #727676;
   padding: 0 0px 10px 100px;
 
+}
+
+.members_header_parent {
+  display: flex;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #00000033;
+  border-width: thin;
+  margin-bottom: 20px;
+  justify-content: left;
+  padding-left: 50px;
+  width: 240px;
+  height: 49px;
+  background-color: #36393f;
 }

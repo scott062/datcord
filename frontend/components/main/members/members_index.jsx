@@ -20,7 +20,9 @@ class MembersIndex extends React.Component {
     const { members } = this.props;
 
     return (
+      <>
       <div className='membersListContainer'>
+        <div className='members_header_parent'></div>
         <h3>Members</h3>
         <ul className='membersListContainer'>
           {members.map(member => (
@@ -31,6 +33,7 @@ class MembersIndex extends React.Component {
         )}
         </ul>
       </div>
+      </>
     )
   }
 }
