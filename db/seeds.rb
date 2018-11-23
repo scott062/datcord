@@ -103,3 +103,19 @@ Member.create({user_id: brittany.id, server_id: js.id})
 Member.create({user_id: regan.id, server_id: js.id})
 Member.create({user_id: test.id, server_id: js.id})
 Member.create({user_id: dustin.id, server_id: js.id})
+
+#Messages
+
+Message.create({body: "hello world" , author_id: scott.id, channel_id: general1.id, channel_type: 'Channel'})
+
+Message.create({body: "hi <3" , author_id: brittany.id, channel_id: general1.id, channel_type: 'Channel'})
+
+Message.create({body: "eggplant" , author_id: keith.id, channel_id: general1.id, channel_type: 'Channel'})
+
+Message.create({body: "Laika...the first dog in space...show some deference!" , author_id: david.id, channel_id: general1.id, channel_type: 'Channel'})
+
+Message.create({body: "One word: fractals." , author_id: dustin.id, channel_id: general1.id, channel_type: 'Channel'})
+
+Message.create({body: "Caution: Jugglers Ahead...Mind your head!" , author_id: test.id, channel_id: general1.id, channel_type: 'Channel'})
+
+Message.create({body: "Sometimes I'll start a sentence and I don't even know where it's going. I just hope I find it along the way." , author_id: scott.id, channel_id: general1.id, channel_type: 'Channel'})
