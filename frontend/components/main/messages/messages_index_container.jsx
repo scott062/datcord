@@ -1,18 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchMessages } from '../../../actions/message_actions';
+import { fetchChannel } from '../../../actions/channel_actions';
 import MessagesIndex from './messages_index';
 
-const msp = (state) => {
+const msp = (state, ownProps) => {
+  let messages = Object.values(state.entities.messages)
+
+  messages = messages.filter(message => message.channel_id === parseInt(ownProps.match.params.channelId))
+
+
   return {
-    messages: state.entities.messages,
-    current_server: state.entites.current_server,
+    messages: messages,
+    current_server: ownProps.match.params.serverId,
   }
 };
 
 const mdp = (dispatch) => {
   return {
-    fetchMessages: () => dispatch(fetchMessages())
+    fetchChannel: (server_id, channel_id) => dispatch(fetchChannel(server_id, channel_id))
   }
 };
 

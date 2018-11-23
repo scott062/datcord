@@ -5,9 +5,10 @@ import { openModal } from '../../../actions/modal_actions';
 import { fetchServer } from '../../../actions/server_actions';
 import { logout } from '../../../actions/session_actions';
 
-const msp = (state) => {
+const msp = (state, ownProps) => {
+  debugger
   let channels = Object.values(state.entities.channels)
-  channels = channels.filter(channel => channel.server_id === state.ui.current_server);
+  channels = channels.filter(channel => channel.server_id === parseInt(ownProps.match.params.serverId));
 
   let server = state.entities.servers[state.ui.current_server]
 

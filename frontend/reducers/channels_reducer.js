@@ -6,12 +6,13 @@ const channelsReducer = (state = {}, action) => {
   Object.freeze(state);
 
   let channels;
+  
   switch (action.type) {
     case RECEIVE_SERVER:
       channels = action.payload.channels
       return merge({}, state, channels);
     case RECEIVE_CHANNEL:
-      return merge({}, state, {[action.channel.id]: action.channel})
+      return merge({}, state, {[action.payload.id]: action.payload.channel})
 
     default:
       return state;

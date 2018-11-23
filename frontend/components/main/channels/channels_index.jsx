@@ -16,7 +16,7 @@ class ChannelsIndex extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.serverId !== this.props.match.params.serverId) {
-      this.props.fetchServer(this.props.match.params.serverId);
+      this.props.fetchServer(parseInt(this.props.match.params.serverId));
     }
   }
 
@@ -25,7 +25,7 @@ class ChannelsIndex extends React.Component {
     if (!server || !currentUser) return null;
     return (
       <>
-      <Route path='channels/:channelId'
+      <Route path='/servers/:serverId/:channelId'
         component={MessagesIndexContainer}/>
       <div className="channels_container">
         <div className='channels_header_parent'>

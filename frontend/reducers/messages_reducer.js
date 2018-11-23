@@ -4,12 +4,14 @@ import { RECEIVE_CHANNEL } from '../actions/channel_actions';
 
 const messageReducer = (currentState = {}, action) => {
   Object.freeze(currentState);
-  debugger
+
   switch (action.type) {
     case RECEIVE_MESSAGES:
       return action.payload.messages;
     case RECEIVE_CHANNEL:
-      return action.payload.messages;
+      if (typeof action.payload.messages != 'undefined') {
+        return action.payload.messages;
+      }
     default:
       return currentState;
   }

@@ -4,7 +4,7 @@ import MessageFormContainer from './message_form_container';
 class MessagesIndex extends React.Component {
 
   componentDidMount() {
-    this.fetchChannels(this.props.current_server, this.props.match.params.channel_id);
+    this.props.fetchChannel(this.props.current_server, this.props.match.params.channelId);
   }
 
   render() {
