@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ChannelIndexItem = ({ channel }) => {
+const ChannelIndexItem = ({ channel, handleClick }) => {
   return (
-    <li className="single_channel_text" key={channel.id}>
+    <li className="single_channel_text" key={channel.id} onClick={handleClick}>
       <Link to={`${channel.id}`}># {channel.channel_name}</Link>
     </li>
   );

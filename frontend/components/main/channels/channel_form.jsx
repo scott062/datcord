@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { API_ROOT, HEADERS } from '../../../util/action_cable_constants';
 
 class ChannelForm extends React.Component {
   constructor(props) {
@@ -14,9 +14,13 @@ class ChannelForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const channelDetails = Object.assign({}, this.state);
-    return this.props.processForm(channelDetails).then(this.props.closeModal, this.props.closeModal);
-  }
+
+    fetch(`${API_ROOT}/channels`, {
+      method: 'POST',
+      headers: HEADERS,
+      data: JSON.stringify(this.state)
+    });
+  };
 
   update(field) {
     return e => this.setState({

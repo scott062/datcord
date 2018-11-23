@@ -8,11 +8,18 @@ import ChannelIndexItem from './channel_index_item';
 class ChannelsIndex extends React.Component {
   constructor (props) {
     super(props);
-  }
+    this.state = {
+      channels: this.props.channels,
+      currentUser: this.props.currentUser,
+      activeChannel: null,
+    };
+    this.handleClick.bind(this);
+  };
 
   componentDidMount() {
     this.props.fetchServer(this.props.match.params.serverId)
-  }
+  };
+
 
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.serverId !== this.props.match.params.serverId) {
@@ -20,9 +27,22 @@ class ChannelsIndex extends React.Component {
     }
   }
 
+  handleClick (id) {
+    this.setState({ activeChannel: id });
+  }
+
   render() {
-    const { channels, server, currentUser } = this.props;
+    const { channels, server, currentUser } = this.state;
     if (!server || !currentUser) return null;
+
+    {this.state.channels.length ? (
+      <Cable
+        channels={channels}
+        handleReceivedMessage={this.handleReceivedMessage}
+        />
+    ) : null };
+
+
     return (
       <>
       <Route path='/servers/:serverId/:channelId'
@@ -35,10 +55,11 @@ class ChannelsIndex extends React.Component {
           <span className='text_channels_header'>TEXT CHANNELS</span><button onClick={this.props.otherForm} className='channel_add_button'><span className='channel_add_plus'>+</span></button>
         </div>
         <ul className='channels_ul'>
-          {channels.map(channel => (
+          {channels.map((channel, this.handleClick) => (
             <ChannelIndexItem
               key={channel.id}
-              channel={channel} />
+              channel={channel}
+              handleClick={this.handleClick} />
             )
           )}
         </ul>
