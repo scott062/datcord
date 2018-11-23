@@ -1,20 +1,32 @@
 import React from 'react';
+import { API_ROOT, HEADERS } from '../../../util/action_cable_constants';
 
 
 class MessageForm extends React.Component {
   constructor(props) {
+
     super(props);
     this.state = {
       body: '',
       author_id: this.props.author_id,
+      channel_id: this.props.channel_id,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({ channel_id: nextProps.channel_id});
+  };
+
   handleSubmit(e) {
     e.preventDefault();
-    const message = Object.assign({}, this.state);
-    this.props.processForm(message);
+
+    fetch(`${API_ROOT}/messages`, {
+      method: 'POST',
+      headers: HEADERS,
+      data: JSON.stringify(this.state)
+    });
+    this.setState({ body: ''});
   }
 
   update(field) {

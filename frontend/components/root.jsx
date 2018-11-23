@@ -7,11 +7,13 @@ import { API_WS_ROOT } from '../util/action_cable_constants';
 
 const Root = ({ store }) => {
   return (
-    <Provider store={store}>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </Provider>
+    <ActionCableProvider url={API_WS_ROOT}>
+      <Provider store={store}>
+        <HashRouter>
+          <App />
+        </HashRouter>
+      </Provider>
+    </ActionCableProvider>
   );
 };
 

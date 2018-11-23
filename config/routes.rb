@@ -4,9 +4,10 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resources :servers, only: [:create, :destroy, :show, :index] do
       resources :channels, only: [:create, :destroy, :show, :index] do
-        resources :messages, only: [:index]
-      end 
+        resources :messages, only: [:index, :create]
+      end
     end
+    resources :messages, only: [:create]
     mount ActionCable.server => '/cable'
   end
 

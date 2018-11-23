@@ -8,6 +8,7 @@ const msp = (state, ownProps) => {
   return {
     formType: 'createChannel',
     server_id: state.entities.current_server,
+    channel_id: state.entities.current_channel,
   };
 };
 
