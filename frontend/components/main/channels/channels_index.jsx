@@ -12,7 +12,6 @@ class ChannelsIndex extends React.Component {
       channels: this.props.channels,
       currentUser: this.props.currentUser,
     };
-    this.handleClick.bind(this);
   };
 
   componentDidMount() {
