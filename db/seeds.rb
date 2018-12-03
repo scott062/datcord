@@ -9,6 +9,7 @@ User.destroy_all
 Server.destroy_all
 Member.destroy_all
 Channel.destroy_all
+Message.destroy_all
 
 def add_user_photo(user)
   file = File.open('app/assets/images/logo_url_2.png')
