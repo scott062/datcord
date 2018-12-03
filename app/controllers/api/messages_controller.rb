@@ -3,9 +3,9 @@ class Api::MessagesController < ApplicationController
     @message = Message.new(message_params)
     @channel = Channel.find(message_params.channel_id)
     if @message.save
-      serialized_data = ActiveModelSerializers::Adapter::Json.new(MessageSerializer.new(message)).serializable_hash
-      MessagesChannel.broadcast_to @channel, serialized_data
-      head :ok
+      render 'api/channels/show'
+    else
+      render @message.errors.full_messages
     end
   end
 
