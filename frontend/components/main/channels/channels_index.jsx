@@ -8,10 +8,6 @@ import ChannelIndexItem from './channel_index_item';
 class ChannelsIndex extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {
-      channels: this.props.channels,
-      currentUser: this.props.currentUser,
-    };
   };
 
   componentDidMount() {
@@ -26,7 +22,7 @@ class ChannelsIndex extends React.Component {
   }
 
   render() {
-    const { channels, server, currentUser } = this.state;
+    const { channels, server, currentUser } = this.props;
     if (!server || !currentUser) return null;
 
     return (
@@ -44,7 +40,7 @@ class ChannelsIndex extends React.Component {
           </button>
         </div>
         <ul className='channels_ul'>
-          {channels.map(channel, channel => (
+          {channels.map(channel => (
             <ChannelIndexItem
               key={channel.id}
               channel={channel} />
