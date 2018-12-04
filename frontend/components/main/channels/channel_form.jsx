@@ -6,20 +6,17 @@ class ChannelForm extends React.Component {
     super(props);
     this.state = {
       channel_name: '',
-      communication_type: 'voice',
-      server_id: props.server_id,
+      communication_type: 'text',
+      server_id: this.props.server_id,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-
-    fetch(`${API_ROOT}/channels`, {
-      method: 'POST',
-      headers: HEADERS,
-      data: JSON.stringify(this.state)
-    });
+    const channelDetails = Object.assign({}, this.state);
+    this.props.processForm(channelDetails)
+    this.props.closeModal;
   };
 
   update(field) {
@@ -63,7 +60,7 @@ class ChannelForm extends React.Component {
               name="communication_type"
               type='radio'
               value='voice'
-              onChange={this.update('channel_name')} />
+              onChange={this.update('communication_type')} />
           </label>
           <input
             className='create_channel_button'
