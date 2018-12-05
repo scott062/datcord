@@ -5,10 +5,10 @@ export const fetchChannels = (id) => {
   });
 };
 
-export const fetchChannel = (server_id, channel_id) => {
+export const fetchChannel = (channel_id) => {
   return $.ajax({
     method: 'GET',
-    url: `api/servers/${server_id}/channels/${channel_id}`,
+    url: `api/channels/${channel_id}`,
   });
 };
 
