@@ -14,7 +14,6 @@ const msp = (state) => {
 const mdp = (dispatch) => {
   return {
     processForm: (serverDetails) => dispatch(createServer(serverDetails)),
-
     closeModal: () => dispatch(closeModal()),
   };
 };

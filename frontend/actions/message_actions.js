@@ -4,8 +4,7 @@ export const RECEIVE_MESSAGES = 'RECEIVE_MESSAGES';
 export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
 
 
-export const fetchMessage = (id) => (dispatch) => {
-
+export const fetchMessage = (channel_id, id) => (dispatch) => {
   return (MessageApiUtil.fetchMessage(id).then( (res) => {
        return (dispatch(receiveMessage(res)))
      }))
@@ -17,8 +16,8 @@ export const fetchMessages = (channel_id) => (dispatch) => {
   }))
 };
 
-export const createMessage = (messageDetails) => (dispatch) => {
-  (MessageApiUtil.createMessage(messageDetails).then((res) => {
+export const createMessage = (channel_id, messageDetails) => (dispatch) => {
+  (MessageApiUtil.createMessage(channel_id, messageDetails).then((res) => {
        return (dispatch(receiveMessage(res)))
      }))
 };

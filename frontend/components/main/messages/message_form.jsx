@@ -4,7 +4,6 @@ import { API_ROOT, HEADERS } from '../../../util/action_cable_constants';
 
 class MessageForm extends React.Component {
   constructor(props) {
-
     super(props);
     this.state = {
       body: '',
@@ -14,15 +13,15 @@ class MessageForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ channel_id: nextProps.channel_id});
-  };
+  componentDidMount() {
+    // this.fetchChannel
+    // this.setState({ channel_id: this.props.channel_id});
+  }
 
   handleSubmit(e) {
     e.preventDefault();
-    const messageDetails = this.state;
-    this.props.processForm(messageDetails);
-    this.setState({ body: ''});
+    const messageDetails = Object.assign({}, this.state);
+    this.props.processForm(messageDetails.channel_id, messageDetails);
   }
 
   update(field) {
@@ -43,7 +42,8 @@ class MessageForm extends React.Component {
           <button
             className='create_message_button'
             type='submit'
-            value='Create'><div className='plus_button_message'>+</div></button>
+            value='Create Message'><div className='plus_button_message'>+</div>
+          </button>
         </form>
       </div>
     )

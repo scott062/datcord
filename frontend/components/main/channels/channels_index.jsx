@@ -1,7 +1,5 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-
-
 import MessagesIndexContainer from '../messages/messages_index_container';
 import ChannelIndexItem from './channel_index_item';
 
