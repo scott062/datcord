@@ -11,7 +11,7 @@ gem 'annotate'
 gem 'rails_12factor'
 gem 'aws-sdk-s3'
 gem 'rack-cors'
-gem 'active_model_serializers'
+# gem 'active_model_serializers'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'

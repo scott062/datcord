@@ -10,9 +10,12 @@ class MessagesIndex extends React.Component {
   render() {
     let { messages } = this.props
     if (!messages) return null;
-    
+
     messages = (Object.values(messages).map(message =>
-      <li key={message.id}><span>{message.create_at}{message.author_id}</span>{message.body}</li>))
+      <li key={message.id}>
+        <span>{message.create_at}{message.author_id}</span>
+        {message.body}
+      </li>))
     return (
       <div className='message_parent_div'>
         <div className='message_header_parent'>

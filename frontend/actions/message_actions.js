@@ -11,8 +11,8 @@ export const fetchMessage = (id) => (dispatch) => {
      }))
 };
 
-export const fetchMessages = () => (dispatch) => {
-  return (MessageApiUtil.fetchMessages().then( (res) => {
+export const fetchMessages = (channel_id) => (dispatch) => {
+  return (MessageApiUtil.fetchMessages(channel_id).then( (res) => {
     return (dispatch(receiveMessages(res)))
   }))
 };

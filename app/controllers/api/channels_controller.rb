@@ -4,7 +4,7 @@ class Api::ChannelsController < ApplicationController
     if @channel.save
       render 'api/channels/show'
     else
-      render @channel.errors.full_messages
+      render json: @channel.errors.full_messages
     end
   end
 
