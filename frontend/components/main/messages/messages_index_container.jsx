@@ -4,11 +4,8 @@ import { fetchChannel } from '../../../actions/channel_actions';
 import MessagesIndex from './messages_index';
 
 const msp = (state, ownProps) => {
-
   let messages = Object.values(state.entities.messages)
-
   messages = messages.filter(message => message.channel_id === parseInt(ownProps.match.params.channelId))
-
   const channelName = state.entities.channels[ownProps.match.params.channelId].channel_name;
 
   return {

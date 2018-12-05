@@ -15,7 +15,7 @@ export const fetchMessage = (id) => {
 export const createMessage = (message) => {
   return $.ajax({
     method: 'POST',
-    url: 'api/messages',
+    url: `api/servers/:server_id/channels/:channel_id/messages`,
     data: { message }
   });
 };
