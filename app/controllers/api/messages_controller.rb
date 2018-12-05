@@ -1,11 +1,13 @@
 class Api::MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
-    @channel = Channel.find(message_params.channel_id)
+    @channel = Channel.find(@message.channel_id)
+    @messages = @channel.messages
+    
     if @message.save
       render 'api/channels/show'
     else
-      render @message.errors.full_messages
+      render json: @message.errors.full_messages
     end
   end
 

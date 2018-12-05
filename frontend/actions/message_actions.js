@@ -1,6 +1,7 @@
 import * as MessageApiUtil from '../util/message_api_util';
 
 export const RECEIVE_MESSAGES = 'RECEIVE_MESSAGES';
+export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
 
 
 export const fetchMessage = (id) => (dispatch) => {
@@ -21,6 +22,20 @@ export const createMessage = (messageDetails) => (dispatch) => {
        return (dispatch(receiveMessage(res)))
      }))
 };
+
+export const receiveMessages = (messages) => {
+  return {
+    type: RECEIVE_MESSAGES,
+    messages,
+  }
+};
+
+export const receiveMessage = (message) => {
+  return {
+    type: RECEIVE_MESSAGE,
+    message,
+  }
+}
 
 // export const deleteMessage = (id) => (dispatch) => {
 //   return (MessageApiUtil.deleteMessage(id).then( (res) => {

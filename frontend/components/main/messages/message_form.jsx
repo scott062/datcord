@@ -20,12 +20,8 @@ class MessageForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
-    fetch(`${API_ROOT}/messages`, {
-      method: 'POST',
-      headers: HEADERS,
-      data: JSON.stringify(this.state)
-    });
+    const messageDetails = this.state;
+    this.props.processForm(messageDetails);
     this.setState({ body: ''});
   }
 

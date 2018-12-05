@@ -1,21 +1,21 @@
 export const fetchMessages = () => {
   return $.ajax({
     method: 'GET',
-    url: 'api/messages',
+    url: 'api/channel/:channel_id/messages',
   });
 };
 
 export const fetchMessage = (id) => {
   return $.ajax({
     method: 'GET',
-    url: `api/messages/${id}`,
+    url: `api/channel/:channel_id/messages/${id}`,
   });
 };
 
 export const createMessage = (message) => {
   return $.ajax({
     method: 'POST',
-    url: `api/servers/:server_id/channels/:channel_id/messages`,
+    url: `api/channels/:channel_id/messages`,
     data: { message }
   });
 };
