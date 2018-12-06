@@ -7,7 +7,7 @@ import ServerForm from './server_form.jsx';
 const msp = (state) => {
   return {
     formType: 'createServer',
-    admin_id: state.session.currentUserId,
+    admin_id: state.session.current_user_id,
   };
 };
 

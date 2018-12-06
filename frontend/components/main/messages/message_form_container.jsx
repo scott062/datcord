@@ -6,7 +6,7 @@ import MessageForm from './message_form.jsx';
 const msp = (state, ownProps) => {
   return {
     formType: 'createMessage',
-    author_id: state.session.currentUserId,
+    author_id: state.session.current_user_id,
   };
 };
 

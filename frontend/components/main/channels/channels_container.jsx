@@ -11,7 +11,7 @@ const msp = (state, ownProps) => {
 
   let server = state.entities.servers[state.ui.current_server]
 
-  const currentUser = state.entities.users[state.session.currentUserId];
+  const currentUser = state.entities.users[state.session.current_user_id];
   return {
     channels: channels,
     server: server,

@@ -32,7 +32,7 @@ const msp = (state) => {
 
   // let server_id = Object.values(state.entities.users)[0].server_memberships[0]
   return {
-    loggedIn: Boolean(state.session.currentUserId),
+    loggedIn: Boolean(state.session.current_user_id),
     // general: `/${server_id}/`,
   };
 };
