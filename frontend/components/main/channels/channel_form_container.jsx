@@ -7,8 +7,8 @@ import ChannelForm from './channel_form';
 const msp = (state, ownProps) => {
   return {
     formType: 'createChannel',
-    server_id: state.entities.current_server,
-    channel_id: state.entities.current_channel,
+    server_id: state.ui.current_server_id,
+    channel_id: state.ui.current_channel_id,
   };
 };
 

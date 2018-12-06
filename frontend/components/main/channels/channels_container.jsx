@@ -9,7 +9,7 @@ const msp = (state, ownProps) => {
   let channels = Object.values(state.entities.channels)
   channels = channels.filter(channel => channel.server_id === parseInt(ownProps.match.params.serverId));
 
-  let server = state.entities.servers[state.ui.current_server]
+  let server = state.entities.servers[state.ui.current_server_id]
 
   const currentUser = state.entities.users[state.session.current_user_id];
   return {

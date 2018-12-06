@@ -1,5 +1,6 @@
 import React from 'react';
 import { API_ROOT, HEADERS } from '../../../util/action_cable_constants';
+import { merge } from 'lodash';
 
 
 class MessageForm extends React.Component {
@@ -7,21 +8,15 @@ class MessageForm extends React.Component {
     super(props);
     this.state = {
       body: '',
-      author_id: this.props.author_id,
-      channel_id: this.props.channel_id,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    // this.fetchChannel
-    // this.setState({ channel_id: this.props.channel_id});
-  }
-
   handleSubmit(e) {
     e.preventDefault();
-    const messageDetails = Object.assign({}, this.state);
-    this.props.processForm(messageDetails.channel_id, messageDetails);
+    const messageDetails = {author_id: this.props.author_id, channel_id: this.props.channel_id, body: this.state.body};
+    debugger
+    this.props.processForm(messageDetails);
   }
 
   update(field) {

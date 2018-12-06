@@ -6,7 +6,7 @@ import MembersIndex from './members_index';
 
 const msp = (state) => {
   let members = Object.values(state.entities.users);
-  let currentServer = state.ui.current_server;
+  let currentServer = state.ui.current_server_id;
   members = members.filter( member => member.server_memberships.includes(currentServer));
   return {
     members: members,

@@ -1,5 +1,6 @@
 class Api::MessagesController < ApplicationController
   def create
+    debugger
     @message = Message.new(message_params)
     if @message.save
       render 'api/messages/show'

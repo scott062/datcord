@@ -7,12 +7,13 @@ const msp = (state, ownProps) => {
   return {
     formType: 'createMessage',
     author_id: state.session.current_user_id,
+    channel_id: state.ui.current_channel_id,
   };
 };
 
 const mdp = (dispatch) => {
   return {
-    processForm: (channel_id, message) => dispatch(createMessage(channel_id, message)),
+    processForm: (message) => dispatch(createMessage(message)),
   };
 };
 
