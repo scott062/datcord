@@ -14,8 +14,12 @@ class MessageForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const messageDetails = {author_id: this.props.author_id, channel_id: this.props.channel_id, body: this.state.body};
-    debugger
+    const messageDetails = {
+      author_id: this.props.author_id,
+      channel_id: this.props.channel_id,
+      channel_type: this.props.channel_type,
+      body: this.state.body,
+    };
     this.props.processForm(messageDetails);
   }
 
