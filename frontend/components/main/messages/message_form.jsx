@@ -21,6 +21,7 @@ class MessageForm extends React.Component {
       body: this.state.body,
     };
     this.props.processForm(messageDetails);
+    this.setState({body: ''});
   }
 
   update(field) {
