@@ -7,7 +7,7 @@ const msp = (state, ownProps) => {
   return {
     formType: 'createMessage',
     author_id: state.session.current_user_id,
-    channel_id: state.ui.current_channel_id,
+    channel_id: ownProps.channel,
     channel_type: 'Channel',
   };
 };

@@ -37,6 +37,7 @@ class MessageForm extends React.Component {
           <textarea
             className='body_input'
             type='text'
+            value={this.state.body}
             placeholder='Type Message to Channel Here'
             onChange={this.update('body')} />
           <button

@@ -25,7 +25,7 @@ class MessagesIndex extends React.Component {
           </span>
         </div>
         <ul className='messages_ul'>{messages}</ul>
-        <MessageFormContainer />
+        <MessageFormContainer channel={this.props.match.params.channelId}/>
       </div>
 
     )
