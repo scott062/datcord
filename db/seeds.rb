@@ -104,6 +104,7 @@ Member.create({user_id: brittany.id, server_id: js.id})
 Member.create({user_id: regan.id, server_id: js.id})
 Member.create({user_id: test.id, server_id: js.id})
 Member.create({user_id: dustin.id, server_id: js.id})
+Member.create({user_id: scott.id, server_id: js.id})
 
 #Messages
 
