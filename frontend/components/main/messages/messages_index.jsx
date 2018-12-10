@@ -1,5 +1,6 @@
 import React from 'react';
 import MessageFormContainer from './message_form_container';
+import MessageIndexItemContainer from './message_index_item_container';
 
 class MessagesIndex extends React.Component {
 
@@ -12,10 +13,8 @@ class MessagesIndex extends React.Component {
     if (!messages) return null;
 
     messages = (Object.values(messages).map(message =>
-      <li key={message.id}>
-        <span>{message.create_at}{message.author_id}</span>
-        {message.body}
-      </li>))
+      <MessageIndexItemContainer key={message.id} message={message} />
+    ))
     return (
       <div className='message_parent_div'>
         <div className='message_header_parent'>
