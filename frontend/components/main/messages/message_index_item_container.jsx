@@ -4,7 +4,7 @@ import MessageIndexItem from './message_index_item.jsx';
 
 const msp = (state, ownProps) => {
   let user = state.entities.users[ownProps.message.author_id];
-  debugger
+  
   return {
     authorName: user.username,
     message: ownProps.message

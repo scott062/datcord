@@ -3,6 +3,7 @@ import ServerIndexContainer from './main/servers/servers_index_container';
 import ChannelIndexContainer from './main/channels/channels_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
+import MessageIndexContainer from './main/messages/messages_index_container.jsx';
 
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -18,8 +19,9 @@ const App = () => {
         <AuthRoute exact path='/signup' component={SignupFormContainer} />
         <ProtectedRoute path='/servers' component={ServerIndexContainer}/>
         <ProtectedRoute path='/' component={ServerIndexContainer}/>
-        <ProtectedRoute path='/servers/:server_id/channels' component={ChannelIndexContainer} />
+
       </Switch>
+      
     </div>
 
 
