@@ -33,7 +33,7 @@ export const receiveServer = (payload) => {
 };
 
 export const createServer = (server) => (dispatch) => {
-  (ServerApiUtil.createServer(server).then((res) => {
+  return (ServerApiUtil.createServer(server).then((res) => {
        return (dispatch(receiveServer(res)))
      }))
 };

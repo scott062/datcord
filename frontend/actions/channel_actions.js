@@ -33,7 +33,7 @@ export const receiveChannel = (payload) => {
 };
 
 export const createChannel = (channelDetails) => (dispatch) => {
-  (ChannelApiUtil.createChannel(channelDetails).then((res) => {
+  return (ChannelApiUtil.createChannel(channelDetails).then((res) => {
        return (dispatch(receiveChannel(res)))
      }))
 };
