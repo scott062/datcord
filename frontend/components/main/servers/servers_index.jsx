@@ -11,8 +11,20 @@ class ServerIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchServers();
+    this.props.fetchServers().then( (payload) => {
+      let serverId = Object.keys(payload.payload.servers)[0];
+      let channelId = payload.payload.servers[serverId].channel_ids[0];
+      this.props.history.push(`/servers/${serverId}/${channelId}`)
+    });
+
   }
+
+  // componentDidUpdate() {
+  //   let serverId = Object.keys(this.props.servers)[0];
+  //   let channelId = this.props.servers[serverId].channel_ids[0];
+  //
+  //   this.props.history.push(`/servers/${serverId}/${channelId}`)
+  // }
 
   render() {
     const { servers, currentUser } = this.props;

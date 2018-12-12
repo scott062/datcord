@@ -19,8 +19,7 @@ class MessagesIndex extends React.Component {
       <div className='message_parent_div'>
         <div className='message_header_parent'>
           <span>
-            <img src='hashtag-solid.svg'/>
-            {this.props.channelName}
+            #{this.props.channelName}
           </span>
         </div>
         <ul className='messages_ul'>{messages}</ul>

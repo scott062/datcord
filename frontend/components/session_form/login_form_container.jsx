@@ -4,10 +4,10 @@ import { login, signup } from '../../actions/session_actions';
 import { Link } from 'react-router-dom';
 import sessionForm from './session_form';
 
-const msp = ({ errors }) => {
+const msp = (state) => {
   return {
     formType: 'login',
-    errors: errors.login,
+    errors: state.errors.login,
   }
 };
 

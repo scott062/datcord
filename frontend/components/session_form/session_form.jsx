@@ -54,6 +54,8 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.formAction(user)
+    this.state.entities.us
+    this.props.history.push(`/servers/`)
   }
 
   update(field) {
