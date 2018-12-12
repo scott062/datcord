@@ -618,3 +618,14 @@ html, body, .main {
   height: 49px;
   background-color: #36393f;
 }
+
+.message_username {
+  font-weight: bold;
+  color: white;
+}
+
+.message_body {
+  display: block;
+  padding-left: 32px;
+  padding-top: 5px;
+}

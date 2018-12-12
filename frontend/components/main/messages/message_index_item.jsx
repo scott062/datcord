@@ -6,8 +6,8 @@ class MessageIndexItem extends React.Component {
     let name = this.props.authorName;
     return (
       <li key={message.id}>
-        <span>{message.created_at.slice(11, 16)} {name}</span>
-        {message.body}
+        <span>{message.created_at.slice(11, 16)} </span><span className='message_username'>{name} </span>
+        <span className='message_body'>{message.body}</span>
       </li>
     )
   }
