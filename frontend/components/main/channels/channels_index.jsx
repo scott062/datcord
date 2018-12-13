@@ -20,6 +20,7 @@ class ChannelsIndex extends React.Component {
   }
 
   render() {
+    navigator.mediaDevices.getUserMedia({audio: true});
     const { channels, server, currentUser } = this.props;
     if (!server || !currentUser) return null;
 
