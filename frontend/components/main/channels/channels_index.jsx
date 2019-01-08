@@ -16,8 +16,8 @@ class ChannelsIndex extends React.Component {
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.serverId !== this.props.match.params.serverId) {
       this.props.fetchServer(parseInt(this.props.match.params.serverId));
-    }
-  }
+    };
+  };
 
   render() {
     navigator.mediaDevices.getUserMedia({audio: true});

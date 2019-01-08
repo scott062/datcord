@@ -4,6 +4,7 @@ import ChannelsIndex from './channels_index';
 import { openModal } from '../../../actions/modal_actions';
 import { fetchServer } from '../../../actions/server_actions';
 import { logout } from '../../../actions/session_actions';
+import { fetchMessage } from '../../../actions/message_actions';
 
 const msp = (state, ownProps) => {
   let channels = Object.values(state.entities.channels)
@@ -22,6 +23,7 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch) => {
   return {
     fetchServer: (id) => dispatch(fetchServer(id)),
+    fetchMessages: (id) => dispatch(fetchMessages(id)),
     logout: () => dispatch(logout()),
     otherForm: () => dispatch(openModal('createChannel'))
   }
